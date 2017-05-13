@@ -62,8 +62,7 @@ Welcome Slider
                                 <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
                                 <div class="product-buttons">
-                                    <a href="" class="btn btn-main-sm">Details</a>
-                                    <a href="" class="btn btn-live-preview">Live Preivew</a>
+                                    <a href="<?php the_permalink();  ?>" class="btn btn-main-sm">Details</a>
                                 </div>
                             </div>
                         </div>
@@ -85,132 +84,40 @@ Welcome Slider
             </div>
         </div>
         <div class="row mt-20 product-items-wrapper">
-            <div class="col-md-4">
-                <div class="product-item">
-                    <div class="product-thumb">
-                        <a href="">
-                            <img class="img-responsive" src="images/products/product-item-1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <div class="product-meta">
-                            <span class="price"> <i class="tf-pricetags"></i> $45</span>
-                            <a class="author" href=""><i class="tf-profile-male"></i>Jonathon Ive</a>
-                        </div>
-                        <h4><a href="">Blue- Business Template</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
-                        <div class="product-buttons">
-                            <a href="" class="btn btn-main-sm">Details</a>
-                            <a href="" class="btn btn-live-preview">Live Preivew</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <div class="product-thumb">
-                        <a href="">
-                            <img class="img-responsive" src="images/products/product-item-2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <div class="product-meta">
-                            <span class="price"> <i class="tf-pricetags"></i> $45</span>
-                            <a class="author" href=""><i class="tf-profile-male"></i>Jonathon Ive</a>
-                        </div>
-                        <h4><a href="">Blue- Business Template</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
-                        <div class="product-buttons">
-                            <a href="" class="btn btn-main-sm">Details</a>
-                            <a href="" class="btn btn-live-preview">Live Preivew</a>
+            <?php
+                $loop = new wp_query(
+                        array(
+                                'post_type' => 'download',
+                                'post_per_page' => 6,
+                        )
+                );
+            ?>
+
+            <?php if($loop->have_posts()) : ?>
+                <?php while($loop->have_posts()) : $loop->the_post()  ?>
+                    <div class="col-md-4">
+                        <div class="product-item">
+                            <div class="product-thumb">
+                                <a href="">
+						            <?php the_post_thumbnail();  ?>
+                                </a>
+                                <!--                                <span class="badge">Pro</span>-->
+                            </div>
+                            <div class="content">
+                                <div class="product-meta">
+                                    <span class="price"> <i class="tf-pricetags"></i><?php do_shortcode('[edd_price]')  ?></span>
+                                    <a class="author" href=""><i class="tf-profile-male"></i><?php the_author();  ?></a>
+                                </div>
+                                <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
+                                <div class="product-buttons">
+                                    <a href="<?php the_permalink();  ?>" class="btn btn-main-sm">Details</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <div class="product-thumb">
-                        <a href="">
-                            <img class="img-responsive" src="images/products/product-item-3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <div class="product-meta">
-                            <span class="price"> <i class="tf-pricetags"></i> $45</span>
-                            <a class="author" href=""><i class="tf-profile-male"></i>Jonathon Ive</a>
-                        </div>
-                        <h4><a href="">Blue- Business Template</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
-                        <div class="product-buttons">
-                            <a href="" class="btn btn-main-sm">Details</a>
-                            <a href="" class="btn btn-live-preview">Live Preivew</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <div class="product-thumb">
-                        <a href="">
-                            <img class="img-responsive" src="images/products/product-item-4.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <div class="product-meta">
-                            <span class="price"> <i class="tf-pricetags"></i> $45</span>
-                            <a class="author" href=""><i class="tf-profile-male"></i>Jonathon Ive</a>
-                        </div>
-                        <h4><a href="">Blue- Business Template</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
-                        <div class="product-buttons">
-                            <a href="" class="btn btn-main-sm">Details</a>
-                            <a href="" class="btn btn-live-preview">Live Preivew</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <div class="product-thumb">
-                        <a href="">
-                            <img class="img-responsive" src="images/products/product-item-5.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <div class="product-meta">
-                            <span class="price"> <i class="tf-pricetags"></i> $45</span>
-                            <a class="author" href=""><i class="tf-profile-male"></i>Jonathon Ive</a>
-                        </div>
-                        <h4><a href="">Blue- Business Template</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
-                        <div class="product-buttons">
-                            <a href="" class="btn btn-main-sm">Details</a>
-                            <a href="" class="btn btn-live-preview">Live Preivew</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <div class="product-thumb">
-                        <a href="">
-                            <img class="img-responsive" src="images/products/product-item-6.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <div class="product-meta">
-                            <span class="price"> <i class="tf-pricetags"></i> $45</span>
-                            <a class="author" href=""><i class="tf-profile-male"></i>Jonathon Ive</a>
-                        </div>
-                        <h4><a href="">Blue- Business Template</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
-                        <div class="product-buttons">
-                            <a href="" class="btn btn-main-sm">Details</a>
-                            <a href="" class="btn btn-live-preview">Live Preivew</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <?php endwhile;  ?>
+            <?php endif;  ?>
         </div>
     </div>
 </section>

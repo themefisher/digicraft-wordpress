@@ -489,6 +489,10 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
   .product-item:hover {
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15); }
+  .product-item .product-thumb img {
+    width:100%;
+    height:auto;
+  }
   .product-item .product-thumb {
     overflow: hidden;
     position: relative;

@@ -99,7 +99,7 @@ function themefisher_scripts() {
     wp_enqueue_style( 'themefisher-style', get_stylesheet_uri() );
     wp_enqueue_style( 'themefisher-bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css' );
     wp_enqueue_style( 'themefisher-fonts', get_template_directory_uri().'/assets/css/themefisher-font.css' );
-    wp_enqueue_style( 'themefisher-main.css', get_template_directory_uri().'/assets/css/style.css' );
+//    wp_enqueue_style( 'themefisher-main.css', get_template_directory_uri().'/assets/css/style.css' );
     wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri().'/assets/css/owl.carousel.css' );
     wp_enqueue_style( 'swift-main.css', get_template_directory_uri().'/assets/css/swift-style.css' );
 
@@ -137,83 +137,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-// Initialize CMB Meta Box the metabox class
-if ( file_exists(  __DIR__ . '/libs/cmb/init.php' ) ) {
-  require_once  __DIR__ . '/libs/cmb/init.php';
-} elseif ( file_exists(  __DIR__ . '/libs/CMB/init.php' ) ) {
-  require_once  __DIR__ . '/libs/CMB/init.php';
-}
-add_filter( 'cmb2_meta_boxes', 'tf_meta_box' );
-function tf_meta_box( array $meta_boxes ) {
-    // Start with an underscore to hide fields from custom fields list
-    $prefix = '_tf_';
-    /**
-     * Product Post type meta box
-     */
-    $meta_boxes['tf_meta_box'] = array(
-        'id'            => 'download',
-        'title'         => __( 'Theme Info', 'cmb2' ),
-        'object_types'  => array( 'download', ), // Post type
-        'context'       => 'normal',
-        'priority'      => 'high',
-        'show_names'    => true, // Show field names on the left
-        'fields'        => array(
-            array(
-                'name'       => __( 'Template Title', 'cmb2' ),
-                'id'         => $prefix . 'template_title',
-                'type'       => 'text',
-            ),
-            array(
-                'name'       => __( 'Template Description', 'cmb2' ),
-                'id'         => $prefix . 'template_des',
-                'type'       => 'textarea',
-            ),
-            array(
-                'name'       => __( 'Template Big Thumbnail Image', 'cmb2' ),
-                'id'         => $prefix . 'template_img',
-                'type'       => 'file',
-            ),
-           
-            array(
-                'name'       => __( 'Demo Url', 'cmb2' ),
-                'id'         => $prefix . 'demo_url',
-                'type'       => 'text_url',
-            ),
-            array(
-                'name'       => __( 'Last Update', 'cmb2' ),
-                'id'         => $prefix . 'last_update',
-                'type'       => 'text',
-            ),
-            array(
-                'name'       => __( 'Technology Used', 'cmb2' ),
-                'id'         => $prefix . 'technology_used',
-                'type'       => 'text',
-            ),
-            array(
-                'name'       => __( 'Product Version', 'cmb2' ),
-                'id'         => $prefix . 'product_version',
-                'type'       => 'text',
-            ),
-            array(
-                'name'       => __( 'Browsers', 'cmb2' ),
-                'id'         => $prefix . 'browsers',
-                'type'       => 'text',
-            ),
-            array(
-                'name'       => __( 'Product Type', 'cmb2' ),
-                'id'         => $prefix . 'item_type',
-                'type'       => 'text',
-            ),
-            
-        ),
-    );
-
-    // Add other metaboxes as needed
-    return $meta_boxes;
-}
-
-
-
 
 
 
@@ -230,7 +153,7 @@ function themeblvd_disable_admin_bar() {
     }
 }
 add_action( 'after_setup_theme', 'themeblvd_disable_admin_bar' );
- 
+
 /**
  * Redirect back to homepage and not allow access to
  * WP admin for Subscribers.
@@ -238,7 +161,7 @@ add_action( 'after_setup_theme', 'themeblvd_disable_admin_bar' );
 function themeblvd_redirect_admin(){
     if ( ! defined('DOING_AJAX') && ! current_user_can('edit_posts') ) {
         wp_redirect( site_url() );
-        exit;      
+        exit;
     }
 }
 add_action( 'admin_init', 'themeblvd_redirect_admin' );
@@ -255,3 +178,9 @@ function pw_format_currency( $formatted, $currency, $price ) {
         return $formatted;
 }
 add_filter( 'edd_usd_currency_filter_before', 'pw_format_currency', 10, 3 );
+
+
+
+if ( file_exists(  __DIR__ . '/libs/cs-framework/cs-framework.php' ) ) {
+	require_once  __DIR__ . '/libs/cs-framework/cs-framework.php';
+}
