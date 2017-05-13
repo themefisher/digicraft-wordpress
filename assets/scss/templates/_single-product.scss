@@ -1,0 +1,303 @@
+.single-product-page {
+	background: #f9f9f9;
+	
+}
+.product-header {
+	padding-top:30px;
+}
+.pro-product-title {
+	padding-top:50px;
+}
+.product-page-header {
+	padding-top: 100px;
+    background: $light;
+    padding-bottom: 50px;
+    h2 {
+    	font-weight:400;
+    	font-size:25px;
+    }
+}
+.product-details {
+	background: $light;
+	padding:15px 20px;
+}
+.product-description-content {
+	h2 {
+		font: 500 22px/1.8 "Roboto",sans-serif;
+		letter-spacing: normal;
+		margin: 70px 0 28px;
+		text-transform: none;
+		color: #010101;
+	}
+	.underhung {
+	    margin: 90px 0;
+	}
+	p {
+	    margin: 2em 0 3em;
+	    line-height: 2;
+	}
+	a.link {
+		color:$blue;
+		font-weight: 500;
+	}
+	ul {
+		padding-left: 20px;
+	    li {
+	        list-style-type:decimal!important;
+	        font-size: 16px;
+	        margin-bottom: 10px;
+	        color: #666;
+	    }
+	}
+}
+
+
+
+
+// Product Sidebar
+.product-sidebar {
+	padding:20px;
+	background: $light;
+	h4 {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+	.blue.edd-submit {
+		@extend .btn-blue;
+		border:none;
+		width: 100%;
+	}
+	.btn-live-preview{
+		width: 100%;
+		padding:16px 0;
+	}
+	.btn-buy-license {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.buy-button , .btn-buy-license , .blue.edd-submit {
+		padding:16px 0px!important;
+	}
+	.edd_price_options {
+		ul {
+			li {
+				border-bottom: 1px dotted #dedede;
+				&:last-child {
+					border:none;
+				}
+				label {
+					cursor: pointer;
+					width: 100%;
+					padding:10px 6px;
+					-webkit-transition: .2s all;
+					-o-transition: .2s all;
+					transition: .2s all;
+					margin-bottom: 0;
+					&:hover {
+						background: #f9f9f9;
+					}
+					input {
+						vertical-align: middle;
+						margin-top: -2px;
+						margin-right: 8px;
+					}
+					input[type=radio]:checked {
+					    background: $blue;
+					}
+				}
+				input[type=radio] {
+				    border-radius: 2px;
+				    background: #E9EEF2;
+				    color: #555;
+				    clear: none;
+				    cursor: pointer;
+				    display: inline-block;
+				    line-height: 0;
+				    height: 18px;
+				    margin: -3px 4px 0 0;
+				    outline: 0;
+				    padding: 0 !important;
+				    text-align: center;
+				    vertical-align: middle;
+				    width: 18px;
+				    min-width: 18px;
+				    -webkit-appearance: none;
+				    -webkit-transition: .05s border-color ease-in-out;
+				    transition: .05s border-color ease-in-out;
+				}
+				input[type=checkbox]:checked:before, input[type=radio]:checked:before {
+					font-size: 16px;
+				    display: inline-block;
+				    vertical-align: middle;
+				    width: 16px;
+				    margin-top: 9px;
+				    margin-left: 2px;
+				    float: left;
+				    color: #fff;
+				   	font-family: "themefisher-font";
+				    content: "\f122";
+				    speak: none;
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				}
+				.edd_price_option_price {
+					display: block;
+					margin-left: 20px;
+				}
+				.edd_price_option_sep {
+					display: none;
+				}
+			}
+		}
+	}
+	.product-price {
+		text-align: center;
+		font-size: 30px;
+		margin-bottom: 20px;
+		border-bottom: 1px dashed $border-color;
+		padding-bottom: 10px;
+		font-weight:bold;
+		.notification {
+			font-weight:normal;
+			font-size:13px;
+		}
+	}
+}
+
+.widget {
+	background: $light;
+	margin-top:20px;
+	padding:20px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	h4 {
+		font-size:14px;
+		font-weight:500;
+		margin-bottom:15px;
+		text-transform:uppercase;
+		font-weight:bold;
+		border-bottom:1px solid $border-color;
+		padding-bottom:10px;
+	}
+}
+.product-features-items-widget {
+	h4 {
+		font-size:15px;
+	}
+	ul {
+		li{
+			border-bottom:1px dotted $border-color;
+			padding:10px 0;
+			&:last-child {
+				border:none;
+			}
+			span {
+				width: 50%;
+				color:#555;
+				display:inline-block;
+				font-weight:500;
+			}
+		}
+	}
+}
+
+.author-widget {
+	
+	.author-name {
+		display:inline-block;
+		text-transform:uppercase;
+		font-weight:bold;
+		color: $black;
+	}
+	.author-img {
+		margin-right:4px;
+	}
+}
+
+
+
+
+
+.product-description {
+	margin-top:20px;
+}
+
+
+
+
+
+
+.related-post {
+    padding:50px 0 30px;
+    background: $light;
+}
+
+
+
+.pricing-feature-list {
+	background:$blue;
+	padding:15px;
+	li {
+		color:$light;
+		margin-bottom:8px;
+		i {
+			margin-right:6px;
+		}
+	}
+}
+
+.pricing-feature-tab {
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+        border-radius:0;
+        background:$blue;
+        border-style:solid;
+        color:$light;
+        border-width:0px;
+        border-color:$blue #dedede transparent #dedede;
+        color:$light!important;
+	}
+    .nav-tabs>li>a:hover {
+        background:none;
+        border:1px solid transparent;
+    }
+    .tab-content {
+    	margin-top:-2px;
+    }
+    .tab-pane {
+    	background: $blue;
+    	padding:10px;
+    	.pricing-feature-list {
+    		padding:4px 10px;
+    	}
+    	
+    }
+    .nav.nav-tabs {
+        border:none;
+        li {
+            margin-bottom:0;
+            float:none;
+            display:inline-block;
+            a {
+                color: #222;
+                font-size: 14px;
+                font-weight:bold;
+            }
+        }
+    }
+    h4 {
+        border-bottom : 1px solid #dedede;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        margin-top: 35px;
+
+    }
+}
+
+
+
+// Rating Plugin Css
+.kk-star-ratings.lft {
+	float:right;
+}
+

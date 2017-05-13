@@ -1,0 +1,28 @@
+.team-subheader {
+  font-size: 20px;
+  color: #242628;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.core-team {
+  .team-block {
+    margin-top:20px;
+    img {
+      display: inline-block;
+      -webkit-border-radius:50%;
+      -moz-border-radius:50%;
+      border-radius:50%;
+    }
+    h4 {
+      font-size:15px;
+      color: #555;
+      margin-top:10px;
+      font-weight:normal;
+    }
+    h6 {
+      color:#999;
+    }
+  }
+}

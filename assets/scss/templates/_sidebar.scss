@@ -1,0 +1,18 @@
+.blog-sidebar {
+	h4 {
+		margin-bottom: 30px;
+	}	
+	img {
+		width: 100%;
+	}
+}
+
+.sidebar-search {
+	margin-bottom:20px;
+	.screen-reader-text {
+		display:none;
+	}
+	input[type=search] {
+		width: 240px;
+	}
+}

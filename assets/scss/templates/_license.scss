@@ -1,0 +1,135 @@
+// license Tab 
+.license-tab {
+    box-shadow: 0px 0px 60px 15px rgba(0, 0, 0, 0.12);
+    padding:25px 20px;
+    margin-top: 30px;
+    width: 80%;
+    margin:50px auto;
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+        border-radius:0;
+        border-top: 2px solid $blue;
+        border-style:solid;
+        border-width:2px 1px 1px 1px;
+        border-color:$blue #dedede transparent #dedede;
+    }
+    .nav-tabs>li>a:hover {
+        background:none;
+        border:1px solid transparent;
+    }
+    .nav.nav-tabs {
+        text-align:center;
+        margin-bottom:30px;
+        li {
+            margin-bottom:0;
+            float:none;
+            display:inline-block;
+            a {
+                color: #222;
+                font-size: 18px;
+            }
+        }
+    }
+    h4 {
+        border-bottom : 1px solid #dedede;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        margin-top: 35px;
+
+    }
+}
+
+
+.license-pricing {
+    .pricing-item {
+        padding: 20px;
+        text-align: left;
+        color: #262b38;
+        border-top: 3px solid #EEF0F3;
+        -webkit-transition: border-color 0.3s;
+        transition: border-color 0.3s;
+        border: 1px solid #F2F2F2;
+        &.active {
+            border:2px solid rgba(139, 144, 157, 0.18);
+        }
+    }
+    .pricing-action {
+        font-weight: bold;
+        margin-top: auto;
+        padding: 15px 25px;
+        color: #fff;
+        display:inline-block;
+        border-radius: 30px;
+        background: $blue;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        border: none;
+    }
+    .pricing-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .pricing-price {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 15px 0 15px;
+        border-top: 3px solid rgba(139, 144, 157, 0.18);
+    }
+    .pricing-currency {
+        font-size: 16px;
+        vertical-align: super;
+    }
+    .pricing-sentence {
+        font-weight: bold;
+        padding: 0 0 0.5em;
+        color: #626771;
+        border-bottom: 3px solid rgba(139, 144, 157, 0.18);
+    }
+     .pricing-feature-list {
+        margin-top: 10px;
+        padding: 20px 0 20px;
+        list-style: none;
+        color: #555;
+        li {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+    }
+    .pricing-item:hover {
+        border-color: $blue;
+    }
+    .pricing-buy-button {
+        text-align:center;
+    }
+    .pricing-discount {
+        text-decoration: line-through;
+        color: #f05f5c;
+        display:inline-block;
+        margin-right: 8px;
+    }
+}
+
+
+
+// Compare Pricing
+.pricing-comparison {
+    .pricing-item {
+        border:2px solid #dedede;
+        padding:30px;
+    }
+    .pricing-title {
+        font-weight: bold;
+        border-bottom: 2px solid #dedede;
+        padding-bottom: 15px;
+    }
+    .pricing-feature-list {
+        padding-left: 15px;
+        padding-top: 10px;
+        li {
+            margin-bottom:8px;
+            list-style-type:decimal;
+            font-size: 16px;
+        }
+    }
+} 
+
+

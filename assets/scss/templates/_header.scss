@@ -1,0 +1,334 @@
+
+
+.navbar {
+    margin-bottom:0;
+    padding:15px 0;
+    background: $light;
+    box-shadow:0 0px 6px 0px rgba(0, 0, 0, 0.26);
+    a {
+        font-size:13px;
+        text-transform: uppercase;
+        font-weight: 500;
+        display:inline-block;
+        -webkit-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+    }
+}
+.menu-item-has-children:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    color: #777;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.menu {
+    li {
+        list-style: none;
+        display: inline-block;
+        &.current-menu-item {
+            a {
+                color: $blue!important;
+            }
+        }
+        &.menu-item-has-children {
+            position: relative;
+            &:hover:before {
+                color: $primary-color;
+            }
+            &:hover>a {
+                color: $primary-color;
+            }
+            &:before {
+                content: '\f3d0';
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                right: 0px;
+                top: 15px;
+                padding-left: 2px;
+                font-family:$tf-font;
+            }
+        }
+        a {
+            color:$text-gray;
+            &:hover,&:focus {
+                color:#00aeef;
+                text-decoration: none;
+                background:transparent;
+            }
+            &.logout-button {
+                padding:8px 15px;
+                color: $orange;
+                width: 100%;
+                &:hover {
+                    background: $orange;
+                    color: $light;
+                }
+
+            }
+        }
+    }
+    .btn-login {
+        background:#60c260;
+        box-shadow: 0px 4px 9.48px 2.52px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        padding:10px 25px;
+        margin-top: 6px;
+        margin-left: 8px;
+        &:active , &:focus{
+            outline: none!important;
+            background:#60c260;
+        }
+        &:hover {
+            text-decoration: none;
+            background:#4f9f4f;
+            color: $light;
+        }
+    }
+    .sub-menu {
+        position: absolute;
+        width: 200px;
+        z-index: 999;
+        background:$light;
+        border-radius: 4px;
+        border:1px solid #dedede;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.17);
+        display: block;
+        border-radius:0;
+        opacity: 0;
+        z-index: 1;
+        visibility: hidden;
+        margin:0;
+        padding:0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+        
+        -webkit-transition: visibility .2s, opacity .2s, -webkit-transform .2s cubic-bezier(0.43, 0.26, 0.11, 0.99);
+        -moz-transition: visibility .2s, opacity .2s, -moz-transform .2s cubic-bezier(0.43, 0.26, 0.11, 0.99);
+        -o-transition: visibility .2s, opacity .2s, -o-transform .2s cubic-bezier(0.43, 0.26, 0.11, 0.99);
+        -ms-transition: visibility .2s, opacity .2s, -ms-transform .2s cubic-bezier(0.43, 0.26, 0.11, 0.99);
+        transition: visibility .2s, opacity .2s, transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
+        li {
+            display:block;
+            a {
+                display:block;
+                padding: 8px 13px;
+                color: #555;
+                text-transform: none;
+                -webkit-transition: .2s all;
+                -o-transition: .2s all;
+                transition: .2s all;
+                &:hover {
+                    background: $blue;
+                    color: $light!important;
+                }
+            }
+        }
+    }
+}
+
+
+.main-menu {
+    margin-left: 50px;
+}
+
+
+.navbar-brand {
+    padding-top: 0;
+}
+.nav>ul>li>a {
+    padding: 10px 15px;
+}
+.navbar-toggle .icon-bar {
+    background:$white;
+}
+.navbar-toggle {
+    border:1px solid $white;
+}
+
+
+// Login Menu CSS
+.loggedin-dropdown{
+    &.dropdown {
+        .dropdown-toggle {
+            img {
+                width:24px;
+                height: auto;
+                margin-right: 5px;
+            }
+        }
+        &:hover  .dropdown-menu{
+            opacity: 1;
+            visibility: visible;
+            color: #777;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+        }
+        .dropdown-menu {
+            display: block;
+            border-radius:0;
+            opacity: 0;
+            z-index: 1;
+            visibility: hidden;
+            margin:0;
+            padding:0;
+            -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+            -webkit-transition: visibility 500ms, opacity 500ms, -webkit-transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
+            -moz-transition: visibility 500ms, opacity 500ms, -moz-transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
+            -o-transition: visibility 500ms, opacity 500ms, -o-transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
+            -ms-transition: visibility 500ms, opacity 500ms, -ms-transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
+            transition: visibility 500ms, opacity 500ms, transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
+            li {
+                display:block;
+                width: 100%;
+                &.current-menu-item a {
+                    color:#312D3B;
+                }
+                a {
+                    display:block;
+                    padding: 8px 13px;
+                    color: #312D3B;
+                    text-transform: none;
+                    -webkit-transition: .2s all;
+                    -o-transition: .2s all;
+                    transition: .2s all;
+                    &:hover {
+                        background: $blue;
+                        color: $light;
+                    }
+                }
+            }
+        }
+    }
+    .btn-loggedin {
+        background:none;
+        margin-top: 6px;
+        margin-left: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-left: 5px;
+        color:#333;
+        display:inline-block;
+        &:active , &:focus{
+            outline: none!important;
+            box-shadow:none;
+        }
+        
+    }
+}
+
+
+
+// Promotion Bar
+
+.promotion-bar {
+    background : #F42;
+    padding: 10px 0;
+    color: #fff;
+    text-align:center;
+    font-size: 15px;
+    font-weight:bold;
+    letter-spacing:1px;
+    a {
+        color: #F42;
+        background: #fff;
+        border-radius: 31px;
+        display: inline-block;
+        padding: 5px 40px;
+        margin-left: 15px;
+    }
+}
+
+// Header Cart Icon 
+.header-cart-icon {
+    margin-top: 14px;
+    .cart-contents {
+        display:inline-block;
+    }
+    span.cart-icon {
+        font-size:20px;
+        font-weight:400;
+        color:#555;
+    }
+    span.counter {
+        background: $blue;
+        color: $light;
+        border-radius: 50%;
+        display:inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align:center;
+    }
+}
+.cart-contents:hover {
+    text-decoration: none
+}
+
+
+
+
+
+
+
+
+// Single Page download Sticky Header Style
+.overly-product-header {
+    position:fixed;
+    width: 100%;
+    opacity:0;
+    .navbar {
+        -webkit-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all;
+        padding: 22px 0;
+    }
+    &.fixed {
+        opacity:1;
+        z-index: 99999999999;
+        .navbar {
+            background:#000!important;
+            border-radius:0;
+        }
+    }
+    .template-title {
+        margin-top:5px;
+        padding-bottom:0;
+        height:auto;
+        h1 {
+            font-size:22px;
+            color: $light;
+            text-transform:capitalize;
+        }
+    }
+    .edd_price_options {
+        ul {
+            li {
+                display:inline-block;
+            }
+        }
+    }
+    .buy-button {
+        .btn-default {
+            color: $light;
+            padding:8px 15px;
+            &:hover {
+                background: $blue;
+            }
+        }
+    }
+} 
+
+
+
+

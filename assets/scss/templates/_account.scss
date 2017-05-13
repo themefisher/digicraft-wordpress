@@ -1,0 +1,52 @@
+.account {
+	padding:150px 0 80px;
+	input {
+		height: 50px;
+		border: 2px solid #f0f0f0;
+		outline: none;
+		padding-left: 6px;
+		width: 100%!important;
+	}
+	label {
+		width: 100%!important;
+		font-weight: 400;
+		color: #555;
+		margin-bottom: 5px;
+		font-size: 15px;
+	}
+	input[type=submit] {
+		border:none;
+		background: $blue;
+		color: $light;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 8px;
+		width: auto!important;
+		height: 40px;
+		padding:6px 30px;
+		font-size: 15px;
+	}
+	legend {
+		padding-bottom: 10px;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	#edd_login_form , #edd_register_form {
+
+		p {
+			margin-bottom: 15px;
+		}
+		.edd-login-remember {
+			display: none;
+		}
+		.edd-lost-password {
+			a {
+				color: $blue;
+				display: inline-block;
+				font-size: 15px;
+			}
+		}
+	}
+}
