@@ -25,74 +25,35 @@ get_header(); ?>
 					</div>
 				</div>
 			</header><!-- .page-header -->
-			<section id="blog-single-page">
+			<section class="section">
 				<div class="container">
 					<div class="row">
-						<?php
-						/* Start the Loop */
-						while ( have_posts() ) : the_post();
-
-								/*
-								 * Include the Post-Format-specific template for the content.
-								 * If you want to override this in a child theme, then include a file
-								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-								 */
-								?>
-								<div class="col-md-4 col-sm-6 col-xs-12" >
-                            <div class="product-wrapper">
-                                
-                              <div class="product-block">
+						<?php while ( have_posts() ) : the_post();?>
+                            <div class="col-md-4">
+                                <div class="product-item">
                                     <div class="product-thumb">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php if(has_post_thumbnail( )): the_post_thumbnail(); endif; ?>
+                                        <a href="">
+											<?php the_post_thumbnail();  ?>
                                         </a>
-                                        <!-- <span class="badge">Pro</span> -->
-                                        <div class="product-buttons">
-                                            <ul>
-                                                <li><a href="<?php the_permalink(); ?>" class="btn btn-default btn-demo">Details</a></li>
-                                                <li><a target="_blank" href="<?php $text = get_post_meta( get_the_ID(), '_tf_demo_url', true ); echo $text;
-                                        ?>" class="btn btn-default btn-download">Preivew</a></li>
-                                            </ul>
-                                        </div>
+                                        <!--                                <span class="badge">Pro</span>-->
                                     </div>
-                                    <div class="product-content">
+                                    <div class="content">
                                         <div class="product-meta">
-                                            <!-- <span class="product-counter"> <i class="tf-ion-android-cart"></i> -->
-                                            <?php // echo edd_get_download_sales_stats( get_the_ID() ); ?>
-                                            <!-- </span> -->
-                                            <span class="price">
-                                                <?php echo do_shortcode('[edd_price]') //edd_price_range(); ?>
-                                            </span>
-
+                                            <span class="price"> <i class="tf-pricetags"></i><?php echo do_shortcode('[edd_price]')  ?></span>
+                                            <a class="author" href=""><i class="tf-profile-male"></i><?php the_author();  ?></a>
                                         </div>
-                                        <h4 class="product-title">
-                                            <a href="<?php the_permalink(); ?>">
-                                                <?php echo get_post_meta( get_the_ID(), '_tf_template_title', true );  ;?>
-                                            </a>
-                                        </h4>
-                                        <p>
-                                            <?php $text = get_post_meta( get_the_ID(), '_tf_template_des', true ); echo $text;?>
-                                        </p>
-                                        
+                                        <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, animi.</p>
+                                        <div class="product-buttons">
+                                            <a href="<?php the_permalink();  ?>" class="btn btn-main-sm">Details</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-
-								<?php
-								// get_template_part( 'template-parts/content', get_post_format() );
-
-							endwhile;
-
-
-						else :
-
-							get_template_part( 'template-parts/content', 'none' );
-
-						endif; ?>
-							
-						
+						<?php endwhile;
+                            else :
+                                get_template_part( 'template-parts/content', 'none' );
+                            endif; ?>
 					</div>
 				</div>
 				

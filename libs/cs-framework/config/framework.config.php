@@ -18,7 +18,146 @@ $settings           = array(
 // FRAMEWORK OPTIONS
 // -----------------------------------------------------------------------------------------------
 // ===============================================================================================
+
+
 $options        = array();
+
+// ------------------------------
+// Testimonial Section                     -
+// ------------------------------
+$options[]   = array(
+	'name'     => 'testimonial_section',
+	'title'    => 'Testimonial',
+	'icon'     => 'fa fa-commenting',
+	'fields'   => array(
+
+		array(
+			'id'      => 'testimonial_switcher',
+			'type'    => 'switcher',
+			'title'   => 'Enable Section',
+			'label'   => 'Do you want to show this section or not ?',
+		),
+
+
+		array(
+			'id'              => 'testimonial_item',
+			'type'            => 'group',
+			'title'           => 'Testimonial Item',
+			'button_title'    => 'Add New Testimonial',
+			'accordion_title' => 'Add New Testimonial',
+			'fields'          => array(
+
+				array(
+					'id'          => 'testimonial_user',
+					'type'        => 'text',
+					'title'       => 'Testimonial User',
+				),
+				array(
+					'id'          => 'testimonial_designation',
+					'type'        => 'text',
+					'title'       => 'Testimonial Designation',
+				),
+				array(
+					'id'          => 'testimonial_image',
+					'type'        => 'upload',
+					'title'       => 'Testimonial Image',
+				),
+
+				array(
+					'id'          => 'testimonial_message',
+					'type'        => 'textarea',
+					'title'       => 'Testimonial User Message',
+				),
+
+			)
+		),
+
+	)
+);
+
+// ------------------------------
+// Feature Section                     -
+// ------------------------------
+$options[]   = array(
+	'name'     => 'service_section',
+	'title'    => 'Service',
+	'icon'     => 'fa fa-life-ring',
+	'fields'   => array(
+
+		array(
+			'id'      => 'service_switcher',
+			'type'    => 'switcher',
+			'title'   => 'Enable Section',
+			'label'   => 'Do you want to show this section or not ?',
+		),
+
+
+		array(
+			'id'              => 'service_item_group',
+			'type'            => 'group',
+			'title'           => 'Feature Item',
+			'button_title'    => 'Add New Feature',
+			'accordion_title' => 'Add New Feature',
+			'fields'          => array(
+
+				array(
+					'id'          => 'service_title',
+					'type'        => 'text',
+					'title'       => 'Feature Title',
+				),
+				array(
+					'id'          => 'service_icon',
+					'type'        => 'icon',
+					'title'       => 'Feature Icon',
+				),
+				array(
+					'id'          => 'service_desc',
+					'type'        => 'textarea',
+					'title'       => 'Feature Message',
+				),
+
+			)
+		),
+
+	)
+);
+
+// ------------------------------
+// Subscription Section                     -
+// ------------------------------
+$options[]   = array(
+	'name'     => 'subscription_section',
+	'title'    => 'Subscription',
+	'icon'     => 'fa fa-envelope',
+	'fields'   => array(
+
+		array(
+			'id'      => 'subscription_switcher',
+			'type'    => 'switcher',
+			'title'   => 'Enable Section',
+			'label'   => 'Do you want to show this section or not ?',
+		),
+		array(
+			'id'      => 'subscription_title',
+			'type'    => 'text',
+			'title'   => 'Subscription Title',
+		),
+		array(
+			'id'      => 'subscription_desc',
+			'type'    => 'textarea',
+			'title'   => 'Subscription Description',
+		),
+		array(
+			'id'      => 'subscription_shortcode',
+			'type'    => 'textarea',
+			'title'   => 'Subscription Shortcode',
+		),
+
+
+
+
+	)
+);
 
 // ----------------------------------------
 // a option section for options overview  -
@@ -2386,7 +2525,7 @@ $options[]   = array(
 
     array(
       'type'    => 'content',
-      'content' => 'If you want to see more functions and features for this framework, you can buy me a coffee. I need a lot of it when I am creating new stuff for you. Thank you in advance.',
+      'content' => 'If you want to see more functions and services for this framework, you can buy me a coffee. I need a lot of it when I am creating new stuff for you. Thank you in advance.',
     ),
 
     array(

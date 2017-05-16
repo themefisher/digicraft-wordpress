@@ -1,0 +1,119 @@
+
+
+/*=================================================================
+  Navigation
+==================================================================*/
+.logo{
+  width: 100px;
+  display: inline-block;
+  img {
+    width:100%;
+  }
+}
+
+
+
+.navbar-brand {
+  height: auto;
+  padding: 8px 0;
+}
+
+.navigation {
+  margin-bottom:0;
+  background: $light;
+  transition: .3s all;
+  padding:10px 0;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06);
+  .navbar-nav > li {
+    float:none;
+    display: inline-block;
+    position: static;
+    &.active {
+      a {
+        color:$primary-color;
+      }
+    }
+     > a {
+      color: #555;
+      font-size: 12px;
+      font-weight: 200;
+      padding: 20px 15px;
+      text-transform: uppercase;
+      transition: .2s ease-in-out 0s;
+      &:hover, &:active, &:focus{
+        background: none;
+        color: $primary-color;
+      }
+    }
+  }
+  .container {
+    position: relative;
+  }
+  .nav .open>a {
+    border:1px solid transparent;
+    background-color: transparent;
+  }
+  .navbar-nav {
+      float: none;
+      display: inline-block;
+  }
+  .dropdown {
+     position: static;
+     &.full-width {
+      .dropdown-menu {
+        left:0;
+        right:0;
+      }
+    }
+    .dropdown-menu {
+      right: auto;
+      left: auto;
+      padding: 10px 0;
+      border-radius:0;
+      transition:.3s all;
+      position: absolute;
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: visibility 0.2s, opacity 0.2s, transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
+        a {
+          color: #222;
+          font-size: 12px;
+          border:1px solid transparent;
+          display: block;
+          padding: 11px 0px 11px 16px;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+    }
+  }
+}
+
+/* ---- Mega Menu ---- */
+
+
+
+.mega {
+  li {
+    &:hover .dropdown-menu {
+      opacity: 1;
+      display: block;
+      transform: translate(0px ,0px);
+      opacity: 1;
+      visibility: visible;
+      color: #777;
+      transform: translateY(0px);
+    }
+  }
+  .mega-content {
+    padding: 20px 30px;
+  }
+}
+
+
+
+

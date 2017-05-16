@@ -1,0 +1,120 @@
+.shopping {
+  h4.widget-title {
+    font-weight: 900;
+  }
+}
+
+
+// Checkout Page
+.shopping.cart {
+  .product-list {
+    .table {
+      .cart-amount {
+        th {
+          background: #f9f9f9;
+          padding: 10px;
+          text-transform: uppercase;
+        }
+      }
+      >tbody>tr>td {
+        vertical-align: middle;
+      }
+    }
+    .product-info {
+      a {
+        margin-left:10px;
+        color: $black;
+        font-weight: 600;
+      }
+    }
+    .product-remove {
+      color:$alert;
+    }
+  }
+  .account-details {
+    margin-top: 30px;
+    legend {
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .btn-pay {
+      margin:20px 0;
+    }
+  }
+}
+
+.shopping.checkout {
+  .coupon-code {
+    margin:20px 0;
+    a {
+      display: block;
+      border: 1px dashed #D1CFCF;
+      border-radius: 4px;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: #D1CFCF;
+      -webkit-transition: border 0.2s ease, color 0.2s ease;
+      -moz-transition: border 0.2s ease, color 0.2s ease;
+      transition: border 0.2s ease, color 0.2s ease;
+    }
+  }
+  .checkout-product-details {
+    padding:20px 0;
+    th {
+      font-size: 14px;
+      color: #A2A0A1;
+      border-bottom-color: #3E3F41;
+    }
+    .product-name {
+      font-weight:700;
+    }
+    .amount {
+      color: #3E3F41;
+      font-weight: 700;
+    }
+    .payment {
+      padding:25px 0;
+    }
+    .payment-list {
+      li {
+        width: 30px;
+        display: inline-block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .card-details {
+      margin: 25px 0 0;
+      input {
+        border: none;
+        border-bottom: 2px solid #D1CFCF;
+        padding-left:0;
+      }
+      .form-group {
+        margin-bottom:20px;
+      }
+      label {
+        margin-bottom:0;
+      }
+      .half-width {
+        width: 50%;
+        float: left;
+      }
+      .padding-right {
+        padding-right:10px;
+      }
+      .padding-left {
+        padding-left:10px;
+      }
+      .card-number {
+
+      }
+    }
+  }
+}
+// End Checkout Page
+
+
+

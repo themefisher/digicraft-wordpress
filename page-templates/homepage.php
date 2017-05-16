@@ -13,7 +13,8 @@ Welcome Slider
             </div>
             <div class="col-md-6">
                 <div class="block">
-                    <h1>Digital Creative Marketplace</h1>
+
+                    <h1><?php echo cs_get_option( 'testimonial_item' );  ?></h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, ipsam.</p>
                     <a data-scroll href="#services" class="btn btn-main">Explore Themes</a>
                 </div>
@@ -34,13 +35,13 @@ Welcome Slider
         </div>
         <div class="row mt-20 product-items-wrapper">
             <?php
-                $loop = new wp_query(
-                        array(
-                                'post_type' => 'download',
-                                'post_per_page' => 1,
-                                'post_status'       => 'publish',
-                                'download_category'=>'featured',
-                        )
+                $loop = new WP_Query(
+	                array(
+		                'post_type' => 'download',
+		                'posts_per_page' => 3,
+		                'post_status'       => 'publish',
+		                'download_category'=>'featured',
+	                )
                 );
             ?>
 
@@ -56,7 +57,7 @@ Welcome Slider
                             </div>
                             <div class="content">
                                 <div class="product-meta">
-                                    <span class="price"> <i class="tf-pricetags"></i><?php do_shortcode('[edd_price]')  ?></span>
+                                    <span class="price"> <i class="tf-pricetags"></i><?php echo do_shortcode('[edd_price]')  ?></span>
                                     <a class="author" href=""><i class="tf-profile-male"></i><?php the_author();  ?></a>
                                 </div>
                                 <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
@@ -85,12 +86,11 @@ Welcome Slider
         </div>
         <div class="row mt-20 product-items-wrapper">
             <?php
-                $loop = new wp_query(
-                        array(
-                                'post_type' => 'download',
-                                'post_per_page' => 6,
-                        )
-                );
+            $args = array(
+	            'post_type' => 'download',
+	            'posts_per_page' => 6,
+            );
+                $loop = new WP_Query($args);
             ?>
 
             <?php if($loop->have_posts()) : ?>
@@ -105,7 +105,7 @@ Welcome Slider
                             </div>
                             <div class="content">
                                 <div class="product-meta">
-                                    <span class="price"> <i class="tf-pricetags"></i><?php do_shortcode('[edd_price]')  ?></span>
+                                    <span class="price"> <i class="tf-pricetags"></i><?php echo do_shortcode('[edd_price]')  ?></span>
                                     <a class="author" href=""><i class="tf-profile-male"></i><?php the_author();  ?></a>
                                 </div>
                                 <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
@@ -125,7 +125,8 @@ Welcome Slider
 <!--
 Start About Section
 ==================================== -->
-<section class="service-2 section">
+<?php  if(cs_get_option('service_switcher')) :  ?>
+<section class="service section">
     <div class="container">
         <div class="row text-center">
             <!-- section title -->
@@ -134,55 +135,30 @@ Start About Section
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
             <!-- /section title -->
+            <?php
+                $service_items_box = cs_get_option('service_item_group');
+                foreach($service_items_box as $service_item):?>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <i class="<?php echo $service_item['service_icon']; ?>"></i>
+                    <h4><?php echo $service_item['service_title'];  ?></h4>
+                    <p><?php echo $service_item['service_desc']  ?></p>
+                </div>
+            </div><!-- END COL -->
+            <?php endforeach;  ?>
 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <i class="tf-ion-ios-alarm-outline"></i>
-                    <h4>Time Management</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
-                </div>
-            </div><!-- END COL -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <i class="tf-ion-ios-albums-outline"></i>
-                    <h4>Marketing Ideas</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
-                </div>
-            </div><!-- END COL -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <i class="tf-ion-ios-analytics-outline"></i>
-                    <h4>Mail Support</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
-                </div>
-            </div><!-- END COL -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <i class="tf-ion-ios-bell-outline"></i>
-                    <h4>System Alert</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
-                </div>
-            </div><!-- END COL -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <i class="tf-ion-ios-cart-outline"></i>
-                    <h4>Shopping System</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
-                </div>
-            </div><!-- END COL -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <i class="tf-ion-ios-chatbubble-outline"></i>
-                    <h4>24/7 Support</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
-                </div>
-            </div><!-- END COL -->
         </div>
     </div>    <!-- End container -->
 </section>   <!-- End section -->
+<?php endif;  ?>
 
 <!-- Start Testimonial
 		=========================================== -->
+
+
+<?php
+$switcher = cs_get_option('testimonial_switcher');
+if($switcher):  ?>
 
 <section class="testimonial section">
     <div class="container">
@@ -193,62 +169,30 @@ Start About Section
             <div class="col-lg-12">
                 <!-- testimonial wrapper -->
                 <div id="testimonials" >
+	                <?php
+	                $testimonial_items = cs_get_option( 'testimonial_item' );
+//
+	                foreach($testimonial_items as $testimonial_item):?>
+                        <div class="item text-center">
+                        <!-- client info -->
+                            <div class="client-details">
+                            <p><?php echo $testimonial_item['testimonial_message']  ?></p>
+                            </div>
+                        <!-- /client info -->
+                        <!-- client photo -->
+                            <div class="client-thumb">
+                            <img src="<?php echo $testimonial_item['testimonial_image']  ?>" class="img-responsive" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h4><?php echo $testimonial_item['testimonial_user']  ?></h4>
+                                <span><?php echo $testimonial_item['testimonial_designation']  ?></span>
+                            </div>
+                        <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+	                <?php endforeach; ?>
 
                     <!-- testimonial single -->
-                    <div class="item text-center">
-                        <!-- client info -->
-                        <div class="client-details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-                        </div>
-                        <!-- /client info -->
-                        <!-- client photo -->
-                        <div class="client-thumb">
-                            <img src="images/client-logo/clients-1.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h4>Josef Anderson</h4>
-                            <span>CEO , Company Name</span>
-                        </div>
-                        <!-- /client photo -->
-                    </div>
-                    <!-- /testimonial single -->
-
-                    <!-- testimonial single -->
-                    <div class="item text-center">
-                        <!-- client info -->
-                        <div class="client-details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-                        </div>
-                        <!-- /client info -->
-                        <!-- client photo -->
-                        <div class="client-thumb">
-                            <img src="images/client-logo/clients-1.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h4>Josef Anderson</h4>
-                            <span>CEO , Company Name</span>
-                        </div>
-                        <!-- /client photo -->
-                    </div>
-                    <!-- /testimonial single -->
-                    <!-- testimonial single -->
-                    <div class="item text-center">
-                        <!-- client info -->
-                        <div class="client-details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
-                        </div>
-                        <!-- /client info -->
-                        <!-- client photo -->
-                        <div class="client-thumb">
-                            <img src="images/client-logo/clients-1.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h4>Josef Anderson</h4>
-                            <span>CEO , Company Name</span>
-                        </div>
-                        <!-- /client photo -->
-                    </div>
-                    <!-- /testimonial single -->
 
                 </div>		<!-- end testimonial wrapper -->
             </div> 		<!-- end col lg 12 -->
@@ -256,29 +200,33 @@ Start About Section
     </div>       <!-- End container -->
 </section>    <!-- End Section -->
 
+<?php endif;  ?>
 <!--
 Start Call To Action
 ==================================== -->
+
+<?php if(cs_get_option('subscription_switcher')):  ?>
 <section class="call-to-action section">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2>Get Free Updates about our template, Join Our mailing List</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, <br> facilis numquam impedit ut sequi. Minus facilis vitae excepturi sit laboriosam.</p>
+                <h2><?php echo cs_get_option('subscription_title')  ?></h2>
+                <p><?php echo cs_get_option('subscription_desc')  ?></p>
                 <div class="col-lg-6 col-md-offset-3">
-                    <div class="input-group subscription-form">
-                        <input type="text" class="form-control" placeholder="Enter Your Email Address">
-                        <span class="input-group-btn">
-				        <button class="btn btn-main" type="button">Subscribe Now!</button>
-				      </span>
-                    </div><!-- /input-group -->
+                    <div class="subscription-form">
+                        <?php echo do_shortcode(cs_get_option('subscription_shortcode'))  ?>
+<!--                        <input type="text" class="form-control" placeholder="Enter Your Email Address">-->
+<!--                        <span class="input-group-btn">-->
+<!--				        <button class="btn btn-main" type="button">Subscribe Now!</button>-->
+<!--				      </span>-->
+                    </div><!-- /input-group
                 </div><!-- /.col-lg-6 -->
 
             </div>
         </div> 		<!-- End row -->
     </div>   	<!-- End container -->
 </section>   <!-- End section -->
-
+<?php endif;  ?>
 
 
 <?php get_footer(); ?>

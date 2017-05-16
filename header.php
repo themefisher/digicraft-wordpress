@@ -30,7 +30,7 @@
 
 
 <header>
-  <nav class="navigation  navbar navbar-fixed-top" id="navigation">
+  <nav class="navigation  navbar " id="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">

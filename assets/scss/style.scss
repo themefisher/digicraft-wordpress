@@ -1,36 +1,58 @@
-@import 'variables';
+@import 'variables.scss';
+
+@import 'typography.scss';
+
+@import 'common.scss';
+
+@import 'templates/header.scss';
+
+@import 'templates/navigation.scss';
+
+@import 'templates/slider.scss';
+
+@import 'templates/products.scss';
+
+@import 'templates/about_us.scss';
+
+@import 'templates/call-to-action.scss';
+
+@import 'templates/contact.scss';
+
+@import 'templates/counter.scss';
+
+@import 'templates/pricing.scss';
+
+@import 'templates/portfolio.scss';
+
+@import 'templates/services.scss';
+
+@import 'templates/skills.scss';
+
+@import 'templates/team.scss';
+
+@import 'templates/testimonials.scss';
+
+@import 'templates/blog.scss';
+
+@import 'templates/blog-sidebar.scss';
+
+@import 'templates/single-post.scss';
+
+@import 'templates/backgrounds.scss';
+
+@import 'templates/account.scss';
+
+@import 'templates/shopping.scss';
+
+@import 'templates/404.scss';
+
+@import 'templates/coming-soon.scss';
+
+@import 'templates/edd.scss';
+
+@import 'templates/footer.scss';
 
 
-@import 'typography';
 
-@import 'common';
 
-@import 'plugins';
 
-@import 'templates/header';
-
-@import 'templates/footer';
-
-@import 'templates/homepage';
-
-@import 'templates/single-product';
-
-@import 'templates/account';
-
-@import 'templates/page-404';
-
-@import 'templates/team';
-
-@import 'templates/sidebar';
-
-@import 'templates/license';
-
-@import 'templates/blog';
-
-@import 'templates/free-templates';
-
-@import 'templates/bootstrap4';
-
-@import 'edd';
-
-@import 'responsive';

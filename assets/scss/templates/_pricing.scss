@@ -1,0 +1,65 @@
+
+
+/*=================================================================
+  Pricing section
+==================================================================*/
+
+.pricing-table {
+  position: relative;
+}
+
+
+  .pricing-item {
+    padding: 40px 55px 65px;
+    background: $light;
+    text-align: center;
+    -moz-box-shadow: rgba(29,29,31,0.13) 0 10px 60px;
+    -webkit-box-shadow: rgba(29,29,31,0.13) 0 10px 60px;
+    box-shadow: rgba(29,29,31,0.13) 0 10px 60px;
+    &.highlited {
+      
+      .btn-main {
+        background: $secondary-color;
+      }
+    }
+     .price-title {
+      padding: 30px 0 20px;
+       > h3 {
+        font-weight: 700;
+        margin: 0 0 5px;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      > p {
+        font-size: 12px;
+        font-family: $secondary-font;
+        line-height: 18px;
+        margin-top: 5px;
+      }
+    }
+    .value {
+      span {
+        background: $black;
+        color: $light;
+        padding:10px 80px;
+        display:inline-block;
+        font-size:30px;
+        font-weight:600;
+      }
+      p {
+        font-family: $secondary-font;
+      }
+    }
+    .pricing-bullet {
+      margin-top: 25px;
+      li {
+        font-weight: 400;
+        padding: 10px 0;
+        color:#666;
+        i {
+          margin-right: 6px;
+        }
+      } 
+    }
+     
+  }

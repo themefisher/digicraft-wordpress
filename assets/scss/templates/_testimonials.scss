@@ -1,0 +1,91 @@
+
+/*=================================================================
+  Testimonial section
+==================================================================*/
+
+.testimonial {
+  position: relative;
+  padding-bottom: 0px;
+  margin-bottom: 80px;
+  .item {
+    p {
+      color: $black;
+      font-size: 17px;
+      font-weight: 200;
+      padding: 0 20%;
+      font-family: $secondary-font;
+    }
+    .client-details {
+      padding-bottom: 30px;
+    }
+    .client-thumb img {
+      display: inline-block;
+      border-radius: 100%;
+      width: 70px;
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+    }
+    .client-meta {
+      margin-top: 20px;
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      p {
+        font-size:12px;
+      }
+    }
+  }
+  .owl-controls {
+    .owl-buttons {
+      position: absolute;
+      top: 45%;
+      width: 100%;
+
+      .owl-prev , .owl-next {
+        background: $light;
+        width: 50px;
+        border-radius:30px;
+        height:50px;
+        text-align:center;
+        color: $black;
+        box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+        border-radius: 40px;
+        i {
+          font-size: 25px;
+          line-height:50px;
+          display: inline-block;
+        }
+      }
+      .owl-prev {
+        float: right;
+      }
+      .owl-next {
+        font-size: 30px;
+        float: left;
+      }
+    }
+  }
+}
+
+.testimonial-icon {
+  margin-bottom:30px;
+  i {
+    font-size: 30px;
+    background:$black;
+    display: inline-block;
+    color: $light;
+    padding:15px;
+    border-radius:40px;
+    position: relative;
+    z-index: 999;
+  }
+  span {
+    background: $black;
+    height:4px;
+    width: 150px;
+    display: inline-block;
+    
+  }
+}
