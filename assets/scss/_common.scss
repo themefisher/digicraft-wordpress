@@ -254,7 +254,6 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
   }
   h2 {
     color: #444;
-    position: relative;
     font-size: 30px;
     margin-top: 0;
     text-transform: uppercase;
@@ -262,14 +261,9 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
   }
   p {
     color: #6f6f6f;
-    letter-spacing: 2px;
-    font-size: 12px;
+    font-size: 14px;
   }
-  &.title-white {
-    h2 {
-      color: $light;
-    }
-  }
+
 }
 
 .title {
@@ -286,7 +280,7 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
 
 // Page Title
 .page-title {
-  padding:120px 0 50px;
+  padding:50px 0;
   background: $primary-color;
   text-align:center;
   position: relative;

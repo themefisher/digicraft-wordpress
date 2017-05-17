@@ -215,17 +215,13 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
     transform: translate(-50%); }
   .section-title h2 {
     color: #444;
-    position: relative;
     font-size: 30px;
     margin-top: 0;
     text-transform: uppercase;
     font-weight: bold; }
   .section-title p {
     color: #6f6f6f;
-    letter-spacing: 2px;
-    font-size: 12px; }
-  .section-title.title-white h2 {
-    color: #fff; }
+    font-size: 14px; }
 
 .title {
   margin-bottom: 50px; }
@@ -237,7 +233,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
     font-size: 15px; }
 
 .page-title {
-  padding: 120px 0 50px;
+  padding: 50px 0;
   background: #F8B412;
   text-align: center;
   position: relative; }
@@ -1247,9 +1243,17 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
 .blog {
   background: #F6F6F6; }
 
+.blog-page .wrapper {
+  padding: 40px 0; }
+
 .post {
   background: #fff;
   margin-bottom: 40px; }
+  .post .post-thumbnail a {
+    display: block; }
+  .post .post-thumbnail img {
+    width: 100%;
+    height: auto; }
   .post .post-media.post-media-audio iframe {
     width: 100%; }
   .post .post-title {

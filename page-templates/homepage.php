@@ -9,14 +9,16 @@ Welcome Slider
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/assets/images/slider/showcase.jpg" alt="">
+                <img class="img-responsive" src="<?php echo cs_get_option('slider_img');  ?>" alt="">
+
             </div>
+
+
             <div class="col-md-6">
                 <div class="block">
 
-                    <h1><?php echo cs_get_option( 'testimonial_item' );  ?></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, ipsam.</p>
-                    <a data-scroll href="#services" class="btn btn-main">Explore Themes</a>
+                    <h1><?php echo cs_get_option( 'slider_heading' );  ?></h1>
+                    <p><?php echo cs_get_option( 'slider_description' );  ?></p>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<div class="entry-meta">
+			<div class="entry-meta test">
 				<ul>
 					<!-- <li>
 						<i class="icon-profile-male"></i>

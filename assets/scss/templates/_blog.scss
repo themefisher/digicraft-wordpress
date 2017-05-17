@@ -6,9 +6,24 @@
   background: #F6F6F6;
 }
 
+.blog-page {
+  .wrapper {
+    padding:40px 0;
+  }
+}
+
 .post {
   background: $light;
   margin-bottom: 40px;
+  .post-thumbnail {
+    a {
+      display: block;
+    }
+    img {
+      width:100%;
+      height:auto;
+    }
+  }
   .post-media {
     &.post-media-audio {
       iframe {

@@ -21,6 +21,75 @@ $settings           = array(
 
 
 $options        = array();
+// ------------------------------
+// Slider Settings
+// ------------------------------
+$options[]   = array(
+	'name'     => 'slider_settings',
+	'title'    => 'Banner',
+	'icon'     => 'fa fa-envelope',
+	'fields'   => array(
+
+		array(
+			'id'      => 'slider_heading',
+			'type'    => 'text',
+			'title'   => 'Slider Heading',
+		),
+		array(
+			'id'      => 'slider_description',
+			'type'    => 'textarea',
+			'title'   => 'Slider Description',
+		),
+		array(
+			'id'      => 'slider_img',
+			'type'    => 'upload',
+			'title'   => 'Slider Image',
+		),
+		array(
+			'id'      => 'slider_button',
+			'type'    => 'text',
+			'title'   => 'slider_button_link',
+		),
+
+
+
+
+	)
+);
+// Slider Settings
+// ------------------------------
+$options[]   = array(
+	'name'     => 'slider_settings',
+	'title'    => 'Banner',
+	'icon'     => 'fa fa-envelope',
+	'fields'   => array(
+
+		array(
+			'id'      => 'slider_heading',
+			'type'    => 'text',
+			'title'   => 'Slider Heading',
+		),
+		array(
+			'id'      => 'slider_description',
+			'type'    => 'textarea',
+			'title'   => 'Slider Description',
+		),
+		array(
+			'id'      => 'slider_img',
+			'type'    => 'upload',
+			'title'   => 'Slider Image',
+		),
+		array(
+			'id'      => 'slider_button',
+			'type'    => 'text',
+			'title'   => 'slider_button_link',
+		),
+
+
+
+
+	)
+);
 
 // ------------------------------
 // Testimonial Section                     -
@@ -151,6 +220,41 @@ $options[]   = array(
 			'id'      => 'subscription_shortcode',
 			'type'    => 'textarea',
 			'title'   => 'Subscription Shortcode',
+		),
+
+
+
+
+	)
+);
+
+// Blog Settings
+// ------------------------------
+$options[]   = array(
+	'name'     => 'blog_settings',
+	'title'    => 'Blog',
+	'icon'     => 'fa fa-envelope',
+	'fields'   => array(
+
+		array(
+			'id'      => 'slider_heading',
+			'type'    => 'text',
+			'title'   => 'Slider Heading',
+		),
+		array(
+			'id'      => 'slider_description',
+			'type'    => 'textarea',
+			'title'   => 'Slider Description',
+		),
+		array(
+			'id'      => 'slider_img',
+			'type'    => 'upload',
+			'title'   => 'Slider Image',
+		),
+		array(
+			'id'      => 'slider_button',
+			'type'    => 'text',
+			'title'   => 'slider_button_link',
 		),
 
 
