@@ -434,8 +434,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
       color: #F8B412; }
     .navigation .navbar-nav > li > a {
       color: #555;
-      font-size: 12px;
-      font-weight: 200;
+      font-size: 14px;
       padding: 20px 15px;
       text-transform: uppercase;
       transition: .2s ease-in-out 0s; }
@@ -1308,6 +1307,9 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
 /*=================================================================
   Single Blog Page
 ==================================================================*/
+.blog-single-page .post {
+  margin-bottom: 0; }
+
 .post-sub-heading, .post-comments .comment-reply-title {
   border-bottom: 1px solid #dedede;
   padding-bottom: 25px;
@@ -1322,6 +1324,8 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
 
 .post-comments {
   margin: 30px 0; }
+  .post-comments .comments-area .comment-list > .comment .comment-body, .post-comments .comments-area .comment-list > .pingback .comment-body {
+    padding-left: 100px; }
   .post-comments li {
     margin-top: 15px; }
     .post-comments li .comment-author {
