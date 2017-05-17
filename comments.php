@@ -1,11 +1,13 @@
 <?php
 /**
- * The template for displaying comments.
+ * The template for displaying comments
  *
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package themefisher
+ * @package WordPress
+ * @subpackage Twenty_Fifteen
+ * @since Twenty Fifteen 1.0
  */
 
 /*
@@ -14,29 +16,52 @@
  * return early without loading the comments.
  */
 if ( post_password_required() ) {
-    return;
+	return;
 }
 ?>
-<section>
+
+<section class="post-comments">
     <div class="container">
         <div class="row">
-            <div class="col-md-9 col-md-offset-1">
-                <div id="comments-section">
-                    <div id="disqus_thread"></div>
-                    <script type="text/javascript">
-                    /* * * CONFIGURATION VARIABLES * * */
-                        var disqus_shortname = 'themefisher';
+            <div class="col-md-12">
+                <div id="comments" class="comments-area">
 
-                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                        (function() {
-                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-                </div>
+
+		            <?php if ( have_comments() ) : ?>
+                        <h2 class="comments-title post-sub-heading">
+				            <?php
+				            printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'tf-swift' ),
+					            number_format_i18n( get_comments_number() ), get_the_title() );
+				            ?>
+                        </h2>
+
+
+                        <ol class="comment-list media-list comments-list m-bot-50 clearlist">
+				            <?php
+				            wp_list_comments( array(
+					            'style'       => 'ol',
+					            'short_ping'  => true,
+					            'avatar_size' => 56,
+				            ) );
+				            ?>
+                        </ol><!-- .comment-list -->
+
+
+		            <?php endif; // have_comments() ?>
+
+		            <?php
+		            // If comments are closed and there are comments, let's leave a little note, shall we?
+		            if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+			            ?>
+                        <p class="no-comments"><?php _e( 'Comments are closed.', 'tf-swift' ); ?></p>
+		            <?php endif; ?>
+
+		            <?php comment_form(); ?>
+
+                </div><!-- .comments-area -->
+
             </div>
         </div>
     </div>
 </section>
+
