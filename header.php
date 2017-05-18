@@ -41,7 +41,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="">
+          <img src="<?php echo cs_get_option('site_logo')  ?>" alt="">
         </a>
       </div>
   

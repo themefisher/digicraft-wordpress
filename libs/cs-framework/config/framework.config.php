@@ -210,42 +210,6 @@ $options[]   = array(
 	)
 );
 
-// Blog Settings
-// ------------------------------
-$options[]   = array(
-	'name'     => 'blog_settings',
-	'title'    => 'Blog',
-	'icon'     => 'fa fa-th-large',
-	'fields'   => array(
-
-		array(
-			'id'      => 'slider_heading',
-			'type'    => 'text',
-			'title'   => 'Slider Heading',
-		),
-		array(
-			'id'      => 'slider_description',
-			'type'    => 'textarea',
-			'title'   => 'Slider Description',
-		),
-		array(
-			'id'      => 'slider_img',
-			'type'    => 'upload',
-			'title'   => 'Slider Image',
-		),
-		array(
-			'id'      => 'slider_button',
-			'type'    => 'text',
-			'title'   => 'slider_button_link',
-		),
-
-
-
-
-	)
-);
-
-
 // ------------------------------
 // backup                       -
 // ------------------------------
