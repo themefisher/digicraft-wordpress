@@ -1324,18 +1324,31 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
 
 .post-comments {
   margin: 30px 0; }
-  .post-comments .comments-area .comment-list > .comment .comment-body, .post-comments .comments-area .comment-list > .pingback .comment-body {
-    padding-left: 100px; }
   .post-comments li {
-    margin-top: 15px; }
+    margin-top: 20px;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 15px; }
+    .post-comments li .children {
+      margin-left: 100px; }
+      .post-comments li .children li:last-child {
+        border-bottom: 0; }
+    .post-comments li .comment-body {
+      padding-left: 70px;
+      position: relative; }
     .post-comments li .comment-author {
       padding-right: 20px; }
       .post-comments li .comment-author img {
-        float: left; }
+        float: left;
+        position: absolute;
+        left: 0;
+        width: 55px;
+        border-radius: 50%; }
   .post-comments .comment-metadata {
     font-size: 12px; }
+  .post-comments .comment-respond {
+    margin-to: 20px; }
   .post-comments .comment-content {
-    margin-top: 20px; }
+    margin-top: 6px; }
   .post-comments .reply {
     font-size: 12px; }
   .post-comments .comment-reply-title {

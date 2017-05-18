@@ -21,24 +21,41 @@
 }
 
 .post-comments {
-  margin:30px 0;
-  .comments-area .comment-list > .comment .comment-body, .comments-area .comment-list > .pingback .comment-body {
-    padding-left: 100px;
-  }
+   margin:30px 0;
   li {
-    margin-top:15px;
+    margin-top:20px;
+    border-bottom:1px solid $border-color;
+    padding-bottom:15px;
+    .children {
+      margin-left: 100px;
+      li:last-child {
+        border-bottom:0;
+      }
+    }
+    .comment-body {
+      padding-left: 70px;
+      position: relative;
+
+    }
     .comment-author {
       padding-right: 20px;
       img {
         float:left;
+        position: absolute;
+        left: 0;
+        width: 55px;
+        border-radius: 50%;
       }
     }
   }
   .comment-metadata {
     font-size:12px;
   }
+  .comment-respond {
+    margin-to:20px;
+  }
   .comment-content {
-    margin-top:20px;
+    margin-top:6px;
   }
   .reply {
     font-size:12px;
