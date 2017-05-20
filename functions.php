@@ -242,3 +242,4 @@ function tf_swift_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
+

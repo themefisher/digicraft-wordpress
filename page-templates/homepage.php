@@ -5,6 +5,14 @@ get_header(); ?>
 Welcome Slider
 ==================================== -->
 
+
+<?php if(have_posts()) :  ?>
+    <?php while(have_posts()) : the_post();  ?>
+        <?php the_content();  ?>
+    <?php endwhile;  ?>
+<?php endif;  ?>
+
+
 <section class="hero-area bg-1 background">
     <div class="container">
         <div class="row">
@@ -59,7 +67,7 @@ Welcome Slider
                             </div>
                             <div class="content">
                                 <div class="product-meta">
-                                    <span class="price"> <i class="tf-pricetags"></i><?php echo do_shortcode('[edd_price]')  ?></span>
+                                    <span class="price"> <i class="tf-pricetags"></i> <?php edd_price($post->ID); ?></span>
                                     <a class="author" href=""><i class="tf-profile-male"></i><?php the_author();  ?></a>
                                 </div>
                                 <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
@@ -107,7 +115,7 @@ Welcome Slider
                             </div>
                             <div class="content">
                                 <div class="product-meta">
-                                    <span class="price"> <i class="tf-pricetags"></i><?php echo do_shortcode('[edd_price]')  ?></span>
+                                    <span class="price"> <i class="tf-pricetags"></i> <?php edd_price($post->ID); ?></span>
                                     <a class="author" href=""><i class="tf-profile-male"></i><?php the_author();  ?></a>
                                 </div>
                                 <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
@@ -158,11 +166,8 @@ Start About Section
 		=========================================== -->
 
 
-<?php
-$switcher = cs_get_option('testimonial_switcher');
-if($switcher):  ?>
-
-<section class="testimonial section">
+<?php $switcher = cs_get_option('testimonial_switcher'); if($switcher):  ?>
+    <section class="testimonial section">
     <div class="container">
         <div class="row">
             <div class="testimonial-icon text-center">
@@ -201,7 +206,6 @@ if($switcher):  ?>
         </div>	    <!-- End row -->
     </div>       <!-- End container -->
 </section>    <!-- End Section -->
-
 <?php endif;  ?>
 <!--
 Start Call To Action

@@ -53,9 +53,27 @@ a:focus, a:hover {
 input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
   border-radius:0;
   box-shadow:none;
-  height:50px;
+  height:45px;
+  padding-left:8px;
   outline: none;
+  &:focus {
+    box-shadow: none;
+    border:1px solid $primary-color;
+  }
+}
+input[type="submit"] {
+  @extend .btn-main ;
+  border:none;
+}
+label {
+  font-weight:500;
+  margin-bottom:6px;
+}
 
+textarea {
+  outline:none;
+  border:1px solid $border-color;
+  padding-left:10px;
   &:focus {
     box-shadow: none;
     border:1px solid $primary-color;
@@ -284,7 +302,7 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
   background: $primary-color;
   text-align:center;
   position: relative;
-  h2 {
+  h2 ,h1 {
     font-weight: 700;
     color: $light;
     font-size: 40px;

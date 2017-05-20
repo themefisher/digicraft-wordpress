@@ -13,14 +13,6 @@ $settings           = array(
   'framework_title' => 'Swift Marketplace Theme Options <small>by themefisher</small>',
 );
 
-// ===============================================================================================
-// -----------------------------------------------------------------------------------------------
-// FRAMEWORK OPTIONS
-// -----------------------------------------------------------------------------------------------
-// ===============================================================================================
-
-
-$options        = array();
 // ------------------------------
 // Others  Settings
 // ------------------------------
@@ -34,6 +26,27 @@ $options[]   = array(
 			'id'      => 'site_logo',
 			'type'    => 'upload',
 			'title'   => 'Site Logo',
+		),
+
+		array(
+			'id'        => 'title_typography',
+			'type'      => 'typography',
+			'title'     => 'Title Font',
+			'default'   => array(
+				'family'  => 'Open Sans',
+				'variant' => '800',
+				'font'    => 'google', // this is helper for output
+			),
+		),
+		array(
+			'id'        => 'body_typography',
+			'type'      => 'typography',
+			'title'     => 'Body Font',
+			'default'   => array(
+				'family'  => 'Open Sans',
+				'variant' => '800',
+				'font'    => 'google', // this is helper for output
+			),
 		),
 	)
 );

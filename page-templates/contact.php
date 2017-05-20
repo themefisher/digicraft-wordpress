@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 
-<section class="global-title">
+<section class="page-title">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -17,10 +17,17 @@ get_header(); ?>
 	</div>
 </section>
 
-<section id="contact-body">
-	<?php while(have_posts()): the_post(); ?>
-	    <?php  the_content(); ?>
-	<?php endwhile; ?>
-	
+<section class="contact-form page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <?php while(have_posts()): the_post(); ?>
+                    <?php  the_content(); ?>
+                <?php endwhile; ?>
+
+            </div>
+        </div>
+    </div>
+
 </section>
 <?php get_footer(); ?>

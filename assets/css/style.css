@@ -5,7 +5,8 @@ body {
 
 p {
   font-family: "Source Sans Pro", sans-serif;
-  color: #757575; }
+  color: #757575;
+  font-size: 15px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
@@ -54,9 +55,25 @@ a:focus, a:hover {
 input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
   border-radius: 0;
   box-shadow: none;
-  height: 50px;
+  height: 45px;
+  padding-left: 8px;
   outline: none; }
   input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus {
+    box-shadow: none;
+    border: 1px solid #F8B412; }
+
+input[type="submit"] {
+  border: none; }
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px; }
+
+textarea {
+  outline: none;
+  border: 1px solid #dedede;
+  padding-left: 10px; }
+  textarea:focus {
     box-shadow: none;
     border: 1px solid #F8B412; }
 
@@ -64,7 +81,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
   box-shadow: none;
   border-radius: 0; }
 
-.btn-main, .btn-main-sm, .btn-live-preview, .subscription-form input[type=submit], .post-comments .comment-form input[type="submit"], .edd-submit.button.blue {
+.btn-main, input[type="submit"], .btn-main-sm, .btn-live-preview, .subscription-form input[type=submit], .post-comments .comment-form input[type="submit"], .edd-submit.button.blue {
   background: #F8B412;
   color: #fff;
   display: inline-block;
@@ -73,7 +90,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
   padding: 14px 35px;
   text-transform: uppercase;
   font-weight: bold; }
-  .btn-main:hover, .btn-main-sm:hover, .btn-live-preview:hover, .subscription-form input[type=submit]:hover, .post-comments .comment-form input[type="submit"]:hover, .edd-submit.button.blue:hover {
+  .btn-main:hover, input[type="submit"]:hover, .btn-main-sm:hover, .btn-live-preview:hover, .subscription-form input[type=submit]:hover, .post-comments .comment-form input[type="submit"]:hover, .edd-submit.button.blue:hover {
     background: #9f7205;
     color: #fff; }
 
@@ -237,7 +254,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
   background: #F8B412;
   text-align: center;
   position: relative; }
-  .page-title h2 {
+  .page-title h2, .page-title h1 {
     font-weight: 700;
     color: #fff;
     font-size: 40px;
@@ -508,9 +525,9 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
       color: #000;
       font-size: 15px;
       margin-bottom: 20px; }
-    .hero-area .block .btn-main, .hero-area .block .btn-main-sm, .hero-area .block .btn-live-preview, .hero-area .block .subscription-form input[type=submit], .subscription-form .hero-area .block input[type=submit], .hero-area .block .post-comments .comment-form input[type="submit"], .post-comments .comment-form .hero-area .block input[type="submit"], .hero-area .block .edd-submit.button.blue {
+    .hero-area .block .btn-main, .hero-area .block input[type="submit"], .hero-area .block .btn-main-sm, .hero-area .block .btn-live-preview, .hero-area .block .subscription-form input[type=submit], .subscription-form .hero-area .block input[type=submit], .hero-area .block .edd-submit.button.blue {
       margin-top: 20px; }
-      .hero-area .block .btn-main:hover, .hero-area .block .btn-main-sm:hover, .hero-area .block .btn-live-preview:hover, .hero-area .block .subscription-form input[type=submit]:hover, .subscription-form .hero-area .block input[type=submit]:hover, .hero-area .block .post-comments .comment-form input[type="submit"]:hover, .post-comments .comment-form .hero-area .block input[type="submit"]:hover, .hero-area .block .edd-submit.button.blue:hover {
+      .hero-area .block .btn-main:hover, .hero-area .block input[type="submit"]:hover, .hero-area .block .btn-main-sm:hover, .hero-area .block .btn-live-preview:hover, .hero-area .block .subscription-form input[type=submit]:hover, .subscription-form .hero-area .block input[type=submit]:hover, .hero-area .block .edd-submit.button.blue:hover {
         opacity: .8; }
 
 .hero-area-video {
@@ -532,7 +549,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
       font-size: 12px;
       letter-spacing: 3px;
       margin-bottom: 20px; }
-    .hero-area-video .block .btn-main, .hero-area-video .block .btn-main-sm, .hero-area-video .block .btn-live-preview, .hero-area-video .block .subscription-form input[type=submit], .subscription-form .hero-area-video .block input[type=submit], .hero-area-video .block .post-comments .comment-form input[type="submit"], .post-comments .comment-form .hero-area-video .block input[type="submit"], .hero-area-video .block .edd-submit.button.blue {
+    .hero-area-video .block .btn-main, .hero-area-video .block input[type="submit"], .hero-area-video .block .btn-main-sm, .hero-area-video .block .btn-live-preview, .hero-area-video .block .subscription-form input[type=submit], .subscription-form .hero-area-video .block input[type=submit], .hero-area-video .block .edd-submit.button.blue {
       margin-top: 20px; }
 
 .slider-1 {
@@ -545,7 +562,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
   .slider-1 h1 {
     font-size: 60px;
     font-weight: bold; }
-  .slider-1 .btn-main, .slider-1 .btn-main-sm, .slider-1 .btn-live-preview, .slider-1 .subscription-form input[type=submit], .subscription-form .slider-1 input[type=submit], .slider-1 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .slider-1 input[type="submit"], .slider-1 .edd-submit.button.blue {
+  .slider-1 .btn-main, .slider-1 input[type="submit"], .slider-1 .btn-main-sm, .slider-1 .btn-live-preview, .slider-1 .subscription-form input[type=submit], .subscription-form .slider-1 input[type=submit], .slider-1 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .slider-1 input[type="submit"], .slider-1 .edd-submit.button.blue {
     margin-top: 30px; }
 
 .slider-searchbox {
@@ -640,7 +657,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
     letter-spacing: 1px; }
   .widget.widget-subscription .form-group {
     margin-bottom: 8px; }
-  .widget.widget-subscription .btn-main, .widget.widget-subscription .btn-main-sm, .widget.widget-subscription .btn-live-preview, .widget.widget-subscription .subscription-form input[type=submit], .subscription-form .widget.widget-subscription input[type=submit], .widget.widget-subscription .post-comments .comment-form input[type="submit"], .post-comments .comment-form .widget.widget-subscription input[type="submit"], .widget.widget-subscription .edd-submit.button.blue {
+  .widget.widget-subscription .btn-main, .widget.widget-subscription input[type="submit"], .widget.widget-subscription .btn-main-sm, .widget.widget-subscription .btn-live-preview, .widget.widget-subscription .subscription-form input[type=submit], .subscription-form .widget.widget-subscription input[type=submit], .widget.widget-subscription .edd-submit.button.blue {
     width: 100%; }
   .widget.widget-latest-post .media .media-heading a {
     color: #000;
@@ -741,89 +758,13 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
     line-height: 1.5; }
   .call-to-action-2 p {
     color: #fff; }
-  .call-to-action-2 .btn-main, .call-to-action-2 .btn-main-sm, .call-to-action-2 .btn-live-preview, .call-to-action-2 .subscription-form input[type=submit], .subscription-form .call-to-action-2 input[type=submit], .call-to-action-2 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .call-to-action-2 input[type="submit"], .call-to-action-2 .edd-submit.button.blue {
+  .call-to-action-2 .btn-main, .call-to-action-2 input[type="submit"], .call-to-action-2 .btn-main-sm, .call-to-action-2 .btn-live-preview, .call-to-action-2 .subscription-form input[type=submit], .subscription-form .call-to-action-2 input[type=submit], .call-to-action-2 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .call-to-action-2 input[type="submit"], .call-to-action-2 .edd-submit.button.blue {
     margin-top: 20px; }
 
-/*=================================================================
-  Contact
-  ==================================================================*/
-.contact-us {
-  padding: 100px 0; }
-
-.contact-form {
-  margin-bottom: 40px; }
-  .contact-form .form-control {
-    background-color: transparent;
-    border: 1px solid #dedede;
-    box-shadow: none;
-    height: 45px !important;
-    color: #0c0c0c;
-    height: 38px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    border-radius: 0; }
-  .contact-form input:hover,
-  .contact-form textarea:hover,
-  .contact-form #contact-submit:hover {
-    border-color: #F8B412; }
-  .contact-form #contact-submit {
-    border: none;
-    padding: 15px 0;
-    width: 100%;
-    margin: 0;
-    background: #F8B412;
-    color: #fff;
-    border-radius: 0; }
-  .contact-form textarea.form-control {
-    padding: 10px;
-    height: 120px !important;
-    outline: none; }
-
-.contact-details .contact-short-info {
-  margin-top: 15px; }
-  .contact-details .contact-short-info li {
-    margin-bottom: 6px; }
-
-.social-icon {
-  margin-top: 20px; }
-  .social-icon ul li {
-    display: inline-block;
-    margin-right: 10px; }
-    .social-icon ul li a {
-      display: block;
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-      border: 1px solid #dedede;
-      text-align: center; }
-      .social-icon ul li a:hover {
-        background: #F8B412;
-        color: #fff;
-        border: 1px solid #F8B412; }
-        .social-icon ul li a:hover i {
-          color: #fff; }
-      .social-icon ul li a i {
-        color: #55606a;
-        display: inline-block;
-        font-size: 20px;
-        line-height: 50px;
-        margin: 0; }
-
-.error {
-  display: none;
-  padding: 10px;
-  color: #D8000C;
-  border-radius: 4px;
-  font-size: 13px;
-  background-color: #FFBABA; }
-
-.success {
-  background-color: #6cb670;
-  border-radius: 4px;
-  color: #fff;
-  display: none;
-  font-size: 13px;
-  padding: 10px; }
+.contact-form label {
+  width: 100%; }
+.contact-form input, .contact-form textarea {
+  width: 100%; }
 
 /*=================================================================
   Item counter section
@@ -884,7 +825,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
   -moz-box-shadow: rgba(29, 29, 31, 0.13) 0 10px 60px;
   -webkit-box-shadow: rgba(29, 29, 31, 0.13) 0 10px 60px;
   box-shadow: rgba(29, 29, 31, 0.13) 0 10px 60px; }
-  .pricing-item.highlited .btn-main, .pricing-item.highlited .btn-main-sm, .pricing-item.highlited .btn-live-preview, .pricing-item.highlited .subscription-form input[type=submit], .subscription-form .pricing-item.highlited input[type=submit], .pricing-item.highlited .post-comments .comment-form input[type="submit"], .post-comments .comment-form .pricing-item.highlited input[type="submit"], .pricing-item.highlited .edd-submit.button.blue {
+  .pricing-item.highlited .btn-main, .pricing-item.highlited input[type="submit"], .pricing-item.highlited .btn-main-sm, .pricing-item.highlited .btn-live-preview, .pricing-item.highlited .subscription-form input[type=submit], .subscription-form .pricing-item.highlited input[type=submit], .pricing-item.highlited .edd-submit.button.blue {
     background: #1bbb1b; }
   .pricing-item .price-title {
     padding: 30px 0 20px; }
@@ -1041,7 +982,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
     font-size: 15px;
     letter-spacing: 0;
     line-height: 26px; }
-  .team-skills .team-skills-content .btn-main, .team-skills .team-skills-content .btn-main-sm, .team-skills .team-skills-content .btn-live-preview, .team-skills .team-skills-content .subscription-form input[type=submit], .subscription-form .team-skills .team-skills-content input[type=submit], .team-skills .team-skills-content .post-comments .comment-form input[type="submit"], .post-comments .comment-form .team-skills .team-skills-content input[type="submit"], .team-skills .team-skills-content .edd-submit.button.blue {
+  .team-skills .team-skills-content .btn-main, .team-skills .team-skills-content input[type="submit"], .team-skills .team-skills-content .btn-main-sm, .team-skills .team-skills-content .btn-live-preview, .team-skills .team-skills-content .subscription-form input[type=submit], .subscription-form .team-skills .team-skills-content input[type=submit], .team-skills .team-skills-content .edd-submit.button.blue {
     margin-top: 30px; }
 
 .clients-logo-slider {
@@ -1287,7 +1228,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
       color: #757575;
       font-size: 16px;
       margin: 10px 0; }
-    .post .post-content .btn-main, .post .post-content .btn-main-sm, .post .post-content .btn-live-preview, .post .post-content .subscription-form input[type=submit], .subscription-form .post .post-content input[type=submit], .post .post-content .post-comments .comment-form input[type="submit"], .post-comments .comment-form .post .post-content input[type="submit"], .post .post-content .edd-submit.button.blue {
+    .post .post-content .btn-main, .post .post-content input[type="submit"], .post .post-content .btn-main-sm, .post .post-content .btn-live-preview, .post .post-content .subscription-form input[type=submit], .subscription-form .post .post-content input[type=submit], .post .post-content .edd-submit.button.blue {
       padding: 12px 25px;
       margin: 15px 0; }
 
@@ -1496,7 +1437,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
     .comment-reply-form input:focus, .comment-reply-form textarea:focus {
       box-shadow: none;
       border: 1px solid #F8B412; }
-  .comment-reply-form textarea, .comment-reply-form .btn-main, .comment-reply-form .btn-main-sm, .comment-reply-form .btn-live-preview, .comment-reply-form .subscription-form input[type=submit], .subscription-form .comment-reply-form input[type=submit], .comment-reply-form .post-comments .comment-form input[type="submit"], .post-comments .comment-form .comment-reply-form input[type="submit"], .comment-reply-form .edd-submit.button.blue {
+  .comment-reply-form textarea, .comment-reply-form .btn-main, .comment-reply-form input[type="submit"], .comment-reply-form .btn-main-sm, .comment-reply-form .btn-live-preview, .comment-reply-form .subscription-form input[type=submit], .subscription-form .comment-reply-form input[type=submit], .comment-reply-form .post-comments .comment-form input[type="submit"], .post-comments .comment-form .comment-reply-form input[type="submit"], .comment-reply-form .edd-submit.button.blue {
     height: auto; }
 
 .background {
@@ -1638,7 +1579,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
   .page-404 .copyright-text {
     margin-top: 50px;
     font-size: 12px; }
-  .page-404 .btn-main, .page-404 .btn-main-sm, .page-404 .btn-live-preview, .page-404 .subscription-form input[type=submit], .subscription-form .page-404 input[type=submit], .page-404 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .page-404 input[type="submit"], .page-404 .edd-submit.button.blue {
+  .page-404 .btn-main, .page-404 input[type="submit"], .page-404 .btn-main-sm, .page-404 .btn-live-preview, .page-404 .subscription-form input[type=submit], .subscription-form .page-404 input[type=submit], .page-404 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .page-404 input[type="submit"], .page-404 .edd-submit.button.blue {
     margin-top: 40px; }
 
 .coming-soon {
