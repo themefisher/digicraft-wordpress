@@ -69,8 +69,8 @@ add_filter('widget_text','do_shortcode');
 
 
 
-
-add_shortcode('testimonial',function($atts){
+//Testimonial Shortcode
+add_shortcode('swift-testimonial',function($atts){
 	ob_start();
 	?>
 	<section class="testimonial section">
@@ -109,3 +109,49 @@ add_shortcode('testimonial',function($atts){
 });
 
 
+//Feature Shortcode
+add_shortcode('swift-features' , function($atts){
+ob_start(); ?>
+	<section class="service">
+		<div class="container">
+			<div class="row text-center">
+				<?php $service_items_box = cs_get_option('service_item_group');
+					foreach($service_items_box as $service_item):?>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="<?php echo $service_item['service_icon']; ?>"></i>
+                                <h4><?php echo $service_item['service_title'];  ?></h4>
+                                <p><?php echo $service_item['service_desc']  ?></p>
+                            </div>
+                        </div>
+					<?php endforeach;  ?>
+				</div>
+            </div>
+        </section>
+<?php
+return ob_get_clean();
+
+});
+
+
+
+// Email Subscription
+add_shortcode('swift-subscription',function($atts) {
+	ob_start(); ?>
+	<section class="call-to-action section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+				<h2><?php echo cs_get_option('subscription_title')  ?></h2>
+				<p><?php echo cs_get_option('subscription_desc')  ?></p>
+				<div class="col-lg-6 col-md-offset-3">
+					<div class="subscription-form">
+						<?php echo do_shortcode(cs_get_option('subscription_shortcode'))  ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<?php return ob_get_clean();
+});
