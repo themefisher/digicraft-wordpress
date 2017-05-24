@@ -52,10 +52,7 @@ class Eventas_Elements {
 	private function register_widget() {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_EDD_Products() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_Features() );
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_Blog_Post() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_Title() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_Price_Table() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_MailChimp() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_Testimonial_Carousel() );
 	}
 }
