@@ -7,13 +7,7 @@ use elementor\Control_Media;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-/**
- * Eventas Testimonial Carousel
- *
- * DigiCraft widget for Testimonial Carousel.
- *
- * @since 1.0.0
- */
+
 class Widget_Testimonial_Carousel extends Widget_Base
 {
 

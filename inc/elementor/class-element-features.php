@@ -58,28 +58,6 @@ class Widget_Features extends Widget_Base
                         'label' => __('Name', 'DigiCraft'),
                         'type' => Controls_Manager::TEXT,
                     ],
-                    [
-                        'name' => 'feature_name',
-                        'label' => __('Job', 'DigiCraft'),
-                        'type' => Controls_Manager::TEXT,
-                        'default' => __('Designer', 'DigiCraft'),
-                        'placeholder' => __('Job', 'DigiCraft'),
-                    ],
-                    [
-                        'name' => 'testimonial_image',
-                        'label' => __('Add Image', 'DigiCraft'),
-                        'type' => Controls_Manager::MEDIA,
-                        'default' => [
-                            'url' => Utils::get_placeholder_image_src(),
-                        ],
-                    ],
-                    [
-                        'name' => 'testimonial_content',
-                        'label' => __('Write Testimonial', 'DigiCraft'),
-                        'type' => Controls_Manager::TEXTAREA,
-                        'rows' => '10',
-                        'default' => 'Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec <span>ullamcorper mattis</span>, pulvinar dapibus leo.',
-                    ],
                 ],
                 'title_field' => '{{{ testimonial_name }}}',
             ]
@@ -92,23 +70,21 @@ class Widget_Features extends Widget_Base
 
     protected function render()
     {
-        $settings = $this->get_settings('features');
+        $features = $this->get_settings('features');
 
         ?>
         <div id="testimonials" >
+            <?php foreach ($features as $feature) : ?>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <i class=""></i>
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
 
-                            <?php foreach ($features as $feature) : ?>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="service-item">
-                                        <i class="<?php echo $settings['service_icon']; ?>"></i>
-                                        <h4><?php echo $settings['service_title'];  ?></h4>
-                                        <p><?php echo $settings['service_desc']  ?></p>
-                                    </div>
-                                </div>
-
-                        <?php endforeach; ?>
-
-                        </div>
 
         <?php
     }
