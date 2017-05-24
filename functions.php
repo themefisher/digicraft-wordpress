@@ -142,26 +142,31 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 //Codestar Fromwork Added
-if ( file_exists(  __DIR__ . '/libs/cs-framework/cs-framework.php' ) ) {
-	require_once  __DIR__ . '/libs/cs-framework/cs-framework.php';
+if ( file_exists(  __DIR__ . '/inc/cs-framework/cs-framework.php' ) ) {
+	require_once  __DIR__ . '/inc/cs-framework/cs-framework.php';
 }
 
 //TMG Plugin for plugin activation
-if ( file_exists(  __DIR__ . '/libs/tmg/class-tgm-plugin-activation.php' ) ) {
-	require_once  __DIR__ . '/libs/tmg/class-tgm-plugin-activation.php';
+if ( file_exists(  __DIR__ . '/inc/tmg/class-tgm-plugin-activation.php' ) ) {
+	require_once  __DIR__ . '/inc/tmg/class-tgm-plugin-activation.php';
 }
 
-//TMG Plugin for plugin activation
-if ( file_exists(  __DIR__ . '/libs/elementor/plugin.php' ) ) {
-	require_once  __DIR__ . '/libs/elementor/plugin.php';
-}
 
-if( file_exists(__DIR__ . '/libs/shortcodes.php')) {
-    require_once __DIR__ . '/libs/shortcodes.php' ;
+
+if( file_exists(__DIR__ . '/inc/shortcodes.php')) {
+    require_once __DIR__ . '/inc/shortcodes.php' ;
 };
 
-if(file_exists(__DIR__ . '/libs/edd_customization.php')){
-    require_once __DIR__ . '/libs/edd_customization.php';
+if(file_exists(__DIR__ . '/inc/edd_customization.php')){
+    require_once __DIR__ . '/inc/edd_customization.php';
+}
+if(file_exists(__DIR__ . '/inc/elementor-functions.php')){
+    require_once __DIR__ . '/inc/elementor-functions.php';
+}
+
+//TMG Plugin for plugin activation
+if ( file_exists(  __DIR__ . '/inc/elements.php' ) ) {
+	require_once  __DIR__ . '/inc/elements.php';
 }
 
 
