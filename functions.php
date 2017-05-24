@@ -1,12 +1,12 @@
 <?php
 /**
- * themefisher functions and definitions.
+ * digicraft functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package themefisher
+ * @package digicraft
  */
-if ( ! function_exists( 'themefisher_setup' ) ) :
+if ( ! function_exists( 'digicraft_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -14,14 +14,14 @@ if ( ! function_exists( 'themefisher_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function themefisher_setup() {
+function digicraft_setup() {
     /*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
-     * If you're building a theme based on themefisher, use a find and replace
-     * to change 'themefisher' to the name of your theme in all the template files.
+     * If you're building a theme based on digicraft, use a find and replace
+     * to change 'digicraft' to the name of your theme in all the template files.
      */
-    load_theme_textdomain( 'themefisher', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'digicraft', get_template_directory() . '/languages' );
 
     // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );
@@ -42,8 +42,8 @@ function themefisher_setup() {
 
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus( array(
-        'primary' => esc_html__( 'Primary', 'themefisher' ),
-        'secondary' => esc_html__( 'Secondary', 'themefisher' ),
+        'primary' => esc_html__( 'Primary', 'digicraft' ),
+        'secondary' => esc_html__( 'Secondary', 'digicraft' ),
     ) );
     /*
      * Switch default core markup for search form, comment form, and comments
@@ -68,13 +68,13 @@ function themefisher_setup() {
         'link',
     ) );
     // Set up the WordPress core custom background feature.
-    add_theme_support( 'custom-background', apply_filters( 'themefisher_custom_background_args', array(
+    add_theme_support( 'custom-background', apply_filters( 'digicraft_custom_background_args', array(
         'default-color' => 'ffffff',
         'default-image' => '',
     ) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'themefisher_setup' );
+add_action( 'after_setup_theme', 'digicraft_setup' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -82,10 +82,10 @@ add_action( 'after_setup_theme', 'themefisher_setup' );
  *
  * @global int $content_width
  */
-function themefisher_content_width() {
-    $GLOBALS['content_width'] = apply_filters( 'themefisher_content_width', 640 );
+function digicraft_content_width() {
+    $GLOBALS['content_width'] = apply_filters( 'digicraft_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'themefisher_content_width', 0 );
+add_action( 'after_setup_theme', 'digicraft_content_width', 0 );
 /**
  * Register widget area.
  *
@@ -95,14 +95,14 @@ add_action( 'after_setup_theme', 'themefisher_content_width', 0 );
 /**
  * Enqueue scripts and styles.
  */
-function themefisher_scripts() {
-    wp_enqueue_style( 'themefisher-style', get_stylesheet_uri() );
-    wp_enqueue_style( 'themefisher-bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css' );
-    wp_enqueue_style( 'themefisher-fonts', get_template_directory_uri().'/assets/css/themefisher-font.css' );
-//    wp_enqueue_style( 'themefisher-main.css', get_template_directory_uri().'/assets/css/style.css' );
+function digicraft_scripts() {
+    wp_enqueue_style( 'digicraft-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'digicraft-bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css' );
+    wp_enqueue_style( 'digicraft-fonts', get_template_directory_uri().'/assets/css/themefisher-font.css' );
+//    wp_enqueue_style( 'digicraft-main.css', get_template_directory_uri().'/assets/css/style.css' );
     wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri().'/assets/css/owl.carousel.css' );
     wp_enqueue_style( 'swift-main.css', get_template_directory_uri().'/assets/css/style.css' );
-    wp_enqueue_script( 'themefisher-bootstrap.min.js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20120206', true );
+    wp_enqueue_script( 'digicraft-bootstrap.min.js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20120206', true );
 
     wp_enqueue_script( 'owl.carousel.min.js', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), '20120206', true );
     wp_enqueue_script( 'script-js', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '20120206', true );
@@ -111,7 +111,7 @@ function themefisher_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'themefisher_scripts' );
+add_action( 'wp_enqueue_scripts', 'digicraft_scripts' );
 /**
  * Implement the Custom Header feature.
  */
@@ -183,20 +183,22 @@ function tf_swift_register_required_plugins() {
 			'slug'      => 'mailchimp-for-wp',
 			'required'  => true,
 		),
-
-
-
+		array(
+			'name'      => 'Elementor Page Builder',
+			'slug'      => 'elementor',
+			'required'  => true,
+		),
 	);
 
 	$config = array(
-		'id'           => 'tf-swift',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-		'default_path' => '',                      // Default absolute path to bundled plugins.
-		'menu'         => 'tgmpa-install-plugins', // Menu slug.
-		'has_notices'  => true,                    // Show admin notices or not.
-		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
-		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-		'message'      => '',                      // Message to output right before the plugins table.
+		'id'           => 'digicraft',
+		'default_path' => '',
+		'menu'         => 'tgmpa-install-plugins',
+		'has_notices'  => true,
+		'dismissable'  => true,
+		'dismiss_msg'  => '',
+		'is_automatic' => true,
+		'message'      => '',
 	);
 
 	tgmpa( $plugins, $config );

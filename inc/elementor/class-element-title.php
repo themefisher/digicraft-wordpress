@@ -43,7 +43,7 @@ class Widget_Title extends Widget_Base {
             [
                 'label'       => __( 'Heading', 'digicraft' ),
                 'type'        => Controls_Manager::TEXT,
-                'default'     => __( 'Get Ticket', 'digicraft' ),
+                'default'     => __( 'Related Products', 'digicraft' ),
                 'placeholder' => __( 'Type your button text here', 'digicraft' ),
             ]
         );

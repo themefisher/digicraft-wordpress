@@ -1,33 +1,54 @@
 .account {
-  .block {
-    background-color: $light;
-    box-shadow: 0 16px 24px rgba(0,0,0,.08);
-    padding:30px;
-    margin:100px 0;
-    .logo {
-      display: inline-block;
-    }
-    h2 {
-      font-weight:600;
-      font-size: 30px;
-      margin-top: 40px;
-    }
-    form {
-      margin-top: 50px;
-      input[type="email"],input[type="password"],input[type="text"]{
+	padding:100px 0 80px;
+  	input {
+		height: 50px;
+		border: 2px solid #f0f0f0;
+		outline: none;
+		padding-left: 6px;
+		width: 100%!important;
+	}
+	label {
+		width: 100%!important;
+		font-weight: 400;
+		color: #555;
+		margin-bottom: 5px;
+		font-size: 15px;
+	}
+	input[type=submit] {
+		border:none;
+		background: $primary-color;
+		color: $light;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 8px;
+		width: auto!important;
+		height: 40px;
+		padding:6px 30px;
+		font-size: 15px;
+        outline:none;
         border-radius:0;
-        box-shadow:none;
-        height:50px;
-      }
-    }
-  }
+	}
+	legend {
+		padding-bottom: 10px;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	#edd_login_form , #edd_register_form {
+
+		p {
+			margin-bottom: 15px;
+		}
+		.edd-login-remember {
+			display: none;
+		}
+		.edd-lost-password {
+			a {
+				color: $primary-color;
+				display: inline-block;
+				font-size: 15px;
+			}
+		}
+	}
 }
-
-
-.empty-cart {
-  .block {
-    margin: 200px 0;
-  }
-}
-
-

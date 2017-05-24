@@ -27,6 +27,12 @@ $options[]   = array(
 			'type'    => 'upload',
 			'title'   => 'Site Logo',
 		),
+		array(
+			'id'    => 'site_color',
+			'type'  => 'color_picker',
+			'title' => 'Website Default Color',
+			'default' => '#feb52b',
+		),
 
 		array(
 			'id'        => 'title_typography',

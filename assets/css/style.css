@@ -428,7 +428,7 @@ textarea {
   Navigation
 ==================================================================*/
 .logo {
-  width: 100px;
+  width: 130px;
   display: inline-block; }
   .logo img {
     width: 100%; }
@@ -506,79 +506,6 @@ textarea {
 .mega .mega-content {
   padding: 20px 30px; }
 
-.hero-area {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .hero-area img {
-    margin-top: 130px; }
-  .hero-area .block {
-    padding: 200px 0; }
-    .hero-area .block h1 {
-      font-size: 60px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #black; }
-    .hero-area .block p {
-      color: #000;
-      font-size: 15px;
-      margin-bottom: 20px; }
-    .hero-area .block .btn-main, .hero-area .block input[type="submit"], .hero-area .block .btn-main-sm, .hero-area .block .btn-live-preview, .hero-area .block .subscription-form input[type=submit], .subscription-form .hero-area .block input[type=submit], .hero-area .block .edd-submit.button.blue {
-      margin-top: 20px; }
-      .hero-area .block .btn-main:hover, .hero-area .block input[type="submit"]:hover, .hero-area .block .btn-main-sm:hover, .hero-area .block .btn-live-preview:hover, .hero-area .block .subscription-form input[type=submit]:hover, .subscription-form .hero-area .block input[type=submit]:hover, .hero-area .block .edd-submit.button.blue:hover {
-        opacity: .8; }
-
-.hero-area-video {
-  height: 100vh;
-  position: inherit !important;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .hero-area-video .block {
-    color: #fff;
-    text-align: center; }
-    .hero-area-video .block h1 {
-      font-size: 60px;
-      font-weight: 700;
-      margin-bottom: 20px; }
-    .hero-area-video .block p {
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 3px;
-      margin-bottom: 20px; }
-    .hero-area-video .block .btn-main, .hero-area-video .block input[type="submit"], .hero-area-video .block .btn-main-sm, .hero-area-video .block .btn-live-preview, .hero-area-video .block .subscription-form input[type=submit], .subscription-form .hero-area-video .block input[type=submit], .hero-area-video .block .edd-submit.button.blue {
-      margin-top: 20px; }
-
-.slider-1 {
-  padding: 200px 0 100px;
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover; }
-  .slider-1 h1 {
-    font-size: 60px;
-    font-weight: bold; }
-  .slider-1 .btn-main, .slider-1 input[type="submit"], .slider-1 .btn-main-sm, .slider-1 .btn-live-preview, .slider-1 .subscription-form input[type=submit], .subscription-form .slider-1 input[type=submit], .slider-1 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .slider-1 input[type="submit"], .slider-1 .edd-submit.button.blue {
-    margin-top: 30px; }
-
-.slider-searchbox {
-  padding: 180px 0 150px; }
-  .slider-searchbox .search-input {
-    width: 50%;
-    margin: 30px auto; }
-    .slider-searchbox .search-input input[type="text"] {
-      height: 46px; }
-  .slider-searchbox h1 {
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 90px; }
-  .slider-searchbox p {
-    font-size: 30px; }
-
 .product-item {
   margin: 0px 0 30px;
   -webkit-transition: .3s all;
@@ -620,10 +547,17 @@ textarea {
   .product-item .product-meta .price {
     display: inline-block;
     color: #F8B412; }
+    .product-item .product-meta .price i {
+      margin-right: 3px; }
   .product-item .product-meta .author {
-    color: #444;
+    color: #666;
     display: inline-block;
-    float: right; }
+    float: right;
+    font-size: 12px;
+    text-transform: capitalize; }
+    .product-item .product-meta .author i {
+      margin-right: 3px;
+      color: #F8B412; }
   .product-item .product-buttons .btn-main-sm, .product-item .product-buttons .btn-live-preview {
     text-transform: capitalize;
     margin-top: 10px; }
@@ -690,241 +624,10 @@ textarea {
         color: #fff;
         background: #F8B412; }
 
-/*=================================================================
-  About us section
-==================================================================*/
-.about {
-  padding: 100px 0;
-  background: #fff; }
-  .about p {
-    color: #555; }
-  .about .btn-about {
-    background: #F8B412; }
-  .about h4 {
-    margin-top: 30px; }
-  .about .feature-list {
-    margin-top: 10px; }
-    .about .feature-list li {
-      width: 48%;
-      display: inline-block;
-      color: #666;
-      font-size: 13px;
-      font-family: 'Open sans';
-      margin-bottom: 5px;
-      font-weight: 600; }
-      .about .feature-list li i {
-        color: #F8B412;
-        margin-right: 8px; }
-
-/*=================================================================
-  About us 2 section
-==================================================================*/
-.about-2 {
-  background: #F7F7F7; }
-  .about-2 .checklist {
-    padding-left: 30px; }
-    .about-2 .checklist li {
-      position: relative;
-      margin-bottom: 15px;
-      font-size: 16px;
-      color: #777;
-      font-family: "Source Sans Pro", sans-serif; }
-      .about-2 .checklist li:before {
-        position: absolute;
-        margin-right: 12px;
-        margin-left: -45px;
-        content: "\f375";
-        font-family: "themefisher-font";
-        opacity: 1;
-        border-radius: 50%;
-        padding: 2px 8px;
-        font-size: 20px; }
-
-/*=================================================================
- Call To Action 1
-==================================================================*/
-.call-to-action h2 {
-  line-height: 1.5;
-  font-size: 20px;
-  font-weight: 600; }
-
-/*=================================================================
- Call To Action 2
-==================================================================*/
-.call-to-action-2 {
-  padding: 100px 0;
-  color: #fff; }
-  .call-to-action-2 h2 {
-    line-height: 1.5; }
-  .call-to-action-2 p {
-    color: #fff; }
-  .call-to-action-2 .btn-main, .call-to-action-2 input[type="submit"], .call-to-action-2 .btn-main-sm, .call-to-action-2 .btn-live-preview, .call-to-action-2 .subscription-form input[type=submit], .subscription-form .call-to-action-2 input[type=submit], .call-to-action-2 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .call-to-action-2 input[type="submit"], .call-to-action-2 .edd-submit.button.blue {
-    margin-top: 20px; }
-
 .contact-form label {
   width: 100%; }
 .contact-form input, .contact-form textarea {
   width: 100%; }
-
-/*=================================================================
-  Item counter section
-==================================================================*/
-.counter {
-  padding: 100px 0; }
-  .counter .counter-title {
-    margin-bottom: 50px; }
-    .counter .counter-title h2 {
-      color: #000;
-      margin-bottom: 20px;
-      font-size: 42px;
-      font-weight: 600;
-      line-height: 35px; }
-    .counter .counter-title p {
-      color: #555;
-      font-size: 16px; }
-
-.counters-item {
-  padding-bottom: 30px;
-  color: #444;
-  position: relative; }
-  .counters-item.kill-border:before {
-    background: none; }
-  .counters-item:before {
-    background: #e5e5e5;
-    content: "";
-    margin-top: -27.5px;
-    height: 55px;
-    width: 1px;
-    position: absolute;
-    right: -15px;
-    top: 50%; }
-  .counters-item > div {
-    margin: 6px 0; }
-  .counters-item span {
-    display: inline;
-    font-size: 35px;
-    line-height: 50px; }
-  .counters-item i {
-    font-size: 40px;
-    display: inline-block;
-    color: #F8B412; }
-  .counters-item h3 {
-    font-size: 17px;
-    margin: 0; }
-
-/*=================================================================
-  Pricing section
-==================================================================*/
-.pricing-table {
-  position: relative; }
-
-.pricing-item {
-  padding: 40px 55px 65px;
-  background: #fff;
-  text-align: center;
-  -moz-box-shadow: rgba(29, 29, 31, 0.13) 0 10px 60px;
-  -webkit-box-shadow: rgba(29, 29, 31, 0.13) 0 10px 60px;
-  box-shadow: rgba(29, 29, 31, 0.13) 0 10px 60px; }
-  .pricing-item.highlited .btn-main, .pricing-item.highlited input[type="submit"], .pricing-item.highlited .btn-main-sm, .pricing-item.highlited .btn-live-preview, .pricing-item.highlited .subscription-form input[type=submit], .subscription-form .pricing-item.highlited input[type=submit], .pricing-item.highlited .edd-submit.button.blue {
-    background: #1bbb1b; }
-  .pricing-item .price-title {
-    padding: 30px 0 20px; }
-    .pricing-item .price-title > h3 {
-      font-weight: 700;
-      margin: 0 0 5px;
-      font-size: 18px;
-      text-transform: uppercase; }
-    .pricing-item .price-title > p {
-      font-size: 12px;
-      font-family: "Lora", serif;
-      line-height: 18px;
-      margin-top: 5px; }
-  .pricing-item .value span {
-    background: #000;
-    color: #fff;
-    padding: 10px 80px;
-    display: inline-block;
-    font-size: 30px;
-    font-weight: 600; }
-  .pricing-item .value p {
-    font-family: "Lora", serif; }
-  .pricing-item .pricing-bullet {
-    margin-top: 25px; }
-    .pricing-item .pricing-bullet li {
-      font-weight: 400;
-      padding: 10px 0;
-      color: #666; }
-      .pricing-item .pricing-bullet li i {
-        margin-right: 6px; }
-
-/*=================================================================
-  Portfolio section
-==================================================================*/
-#portfolio-items-wrapper .mix {
-  display: none; }
-
-.portfolio {
-  padding: 100px 0; }
-
-.portfolio-filter {
-  margin-bottom: 40px;
-  text-align: center; }
-  .portfolio-filter ul li {
-    cursor: pointer;
-    color: #444;
-    display: inline-block;
-    font-size: 13px;
-    padding: 8px 20px;
-    text-transform: uppercase;
-    font-weight: bold; }
-    .portfolio-filter ul li.active {
-      background: #F8B412;
-      color: #fff;
-      border-radius: 50px; }
-
-.portfolio-block {
-  position: relative;
-  margin-bottom: 30px; }
-  .portfolio-block:before {
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background: rgba(0, 0, 0, 0.55);
-    opacity: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    content: ''; }
-  .portfolio-block:hover:before {
-    opacity: 1; }
-  .portfolio-block:hover .caption h4 {
-    top: 45%; }
-  .portfolio-block:hover .caption {
-    opacity: 1;
-    top: 55%; }
-  .portfolio-block .caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    z-index: 9;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    text-align: center; }
-    .portfolio-block .caption h4 {
-      font-size: 16px; }
-      .portfolio-block .caption h4 a {
-        color: #fff; }
-    .portfolio-block .caption .search-icon {
-      background: #F8B412;
-      color: #fff;
-      display: inline-block;
-      padding: 4px 13px;
-      font-size: 25px;
-      border-radius: 30px; }
 
 .service-item {
   border: 1px solid #eee;
@@ -951,162 +654,6 @@ textarea {
     width: 55px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
-
-/*=================================================================
-  Our skills
-==================================================================*/
-.team-skills {
-  padding: 70px 0 100px; }
-  .team-skills .progress-block {
-    margin-top: 40px; }
-    .team-skills .progress-block span {
-      color: #444;
-      display: inline-block;
-      margin-bottom: 5px;
-      font-size: 12px; }
-    .team-skills .progress-block .progress {
-      box-shadow: none;
-      border-radius: 0;
-      height: 10px; }
-      .team-skills .progress-block .progress .progress-bar {
-        background: #F8B412;
-        box-shadow: none; }
-  .team-skills .team-skills-content h3 {
-    color: #444;
-    font-size: 42px;
-    font-weight: 600;
-    margin-bottom: 30px;
-    margin-top: 0; }
-  .team-skills .team-skills-content p {
-    color: #757575;
-    font-size: 15px;
-    letter-spacing: 0;
-    line-height: 26px; }
-  .team-skills .team-skills-content .btn-main, .team-skills .team-skills-content input[type="submit"], .team-skills .team-skills-content .btn-main-sm, .team-skills .team-skills-content .btn-live-preview, .team-skills .team-skills-content .subscription-form input[type=submit], .subscription-form .team-skills .team-skills-content input[type=submit], .team-skills .team-skills-content .edd-submit.button.blue {
-    margin-top: 30px; }
-
-.clients-logo-slider {
-  margin-top: 50px; }
-
-/*=================================================================
-  Step section
-==================================================================*/
-.development-steps .step {
-  padding: 80px 20px; }
-  .development-steps .step h4 {
-    font-size: 20px;
-    font-weight: 600; }
-    .development-steps .step h4 i {
-      font-size: 72px;
-      font-weight: 500;
-      margin-right: 10px; }
-  .development-steps .step p {
-    color: #cccccc;
-    font-size: 14px;
-    line-height: 22px; }
-.development-steps .step-1 {
-  background-color: #f2f6f8; }
-  .development-steps .step-1 h4 {
-    color: #212121; }
-  .development-steps .step-1 p {
-    color: #838383; }
-.development-steps .step-2 {
-  background-color: #F8B412; }
-  .development-steps .step-2 h4, .development-steps .step-2 p {
-    color: #fff; }
-.development-steps .step-3 {
-  background: #d19506; }
-  .development-steps .step-3 h4, .development-steps .step-3 p {
-    color: #fff; }
-.development-steps .step-4 {
-  background: #b88305; }
-  .development-steps .step-4 h4, .development-steps .step-4 p {
-    color: #fff; }
-
-/*=================================================================
-  Our Team
-  ==================================================================*/
-.team {
-  padding: 100px 0;
-  background: #F6F6F6; }
-  .team .team-member {
-    background: #fff; }
-    .team .team-member .member-content {
-      padding: 25px 0; }
-      .team .team-member .member-content h3 {
-        font-size: 20px;
-        margin: 0 0 5px;
-        color: #333; }
-      .team .team-member .member-content span {
-        font-size: 12px;
-        color: #555; }
-      .team .team-member .member-content p {
-        color: #777;
-        margin-top: 10px;
-        padding: 0 15px; }
-  .team .member-photo {
-    overflow: hidden;
-    position: relative; }
-    .team .member-photo:hover img {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      transform: scale(1.1); }
-    .team .member-photo img {
-      -webkit-transition: all 0.6s ease 0s;
-      -moz-transition: all 0.6s ease 0s;
-      -o-transition: all 0.6s ease 0s;
-      transition: all 0.6s ease 0s; }
-    .team .member-photo .mask {
-      background: rgba(248, 180, 18, 0.7);
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      top: auto;
-      opacity: 0;
-      filter: alpha(opacity=0);
-      left: 0;
-      right: 0;
-      cursor: pointer;
-      padding: 0;
-      height: 80px;
-      -moz-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-      -webkit-transition: all .3s ease;
-      -moz-transition: all .3s ease;
-      -ms-transition: all .3s ease;
-      -o-transition: all .3s ease;
-      transition: all .3s ease; }
-      .team .member-photo .mask ul {
-        text-align: center;
-        position: relative;
-        margin-top: 22px; }
-        .team .member-photo .mask ul li {
-          display: inline-block;
-          margin-right: 7px; }
-          .team .member-photo .mask ul li a {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            color: #fff;
-            display: block;
-            font-size: 20px;
-            height: 35px;
-            line-height: 35px;
-            text-align: center;
-            width: 35px; }
-            .team .member-photo .mask ul li a::hover {
-              background-color: #6cb670;
-              border: 1px solid transparent; }
-    .team .member-photo:hover .mask {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      -moz-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%); }
 
 /*=================================================================
   Testimonial section
@@ -1440,56 +987,47 @@ textarea {
   .comment-reply-form textarea, .comment-reply-form .btn-main, .comment-reply-form input[type="submit"], .comment-reply-form .btn-main-sm, .comment-reply-form .btn-live-preview, .comment-reply-form .subscription-form input[type=submit], .subscription-form .comment-reply-form input[type=submit], .comment-reply-form .post-comments .comment-form input[type="submit"], .post-comments .comment-form .comment-reply-form input[type="submit"], .comment-reply-form .edd-submit.button.blue {
     height: auto; }
 
-.background {
-  background-size: cover; }
-
-.bg-100 {
-  height: 100vh; }
-
-.bg-1 {
-  background-image: url(../images/slider/slider-bg-1.jpg); }
-
-.bg-2 {
-  background-image: url("../images/page-header-1.jpg");
-  background-size: cover; }
-  .bg-2:before {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0; }
-
-.bg-coming-soon {
-  background: url("../images/backgrounds/coming-soon-bg.jpg");
-  background-size: cover;
-  height: 100vh; }
-
-.bg-brand-identity {
-  background-image: url("../images/backgrounds/brand-identity-bg.jpg");
-  background-repeat: no-repeat; }
-
-.account .block {
-  background-color: #fff;
-  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-  margin: 100px 0; }
-  .account .block .logo {
-    display: inline-block; }
-  .account .block h2 {
+.account {
+  padding: 100px 0 80px; }
+  .account input {
+    height: 50px;
+    border: 2px solid #f0f0f0;
+    outline: none;
+    padding-left: 6px;
+    width: 100% !important; }
+  .account label {
+    width: 100% !important;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 15px; }
+  .account input[type=submit] {
+    border: none;
+    background: #F8B412;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 8px;
+    width: auto !important;
+    height: 40px;
+    padding: 6px 30px;
+    font-size: 15px;
+    outline: none;
+    border-radius: 0; }
+  .account legend {
+    padding-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
     font-weight: 600;
-    font-size: 30px;
-    margin-top: 40px; }
-  .account .block form {
-    margin-top: 50px; }
-    .account .block form input[type="email"], .account .block form input[type="password"], .account .block form input[type="text"] {
-      border-radius: 0;
-      box-shadow: none;
-      height: 50px; }
-
-.empty-cart .block {
-  margin: 200px 0; }
+    letter-spacing: 1px; }
+  .account #edd_login_form p, .account #edd_register_form p {
+    margin-bottom: 15px; }
+  .account #edd_login_form .edd-login-remember, .account #edd_register_form .edd-login-remember {
+    display: none; }
+  .account #edd_login_form .edd-lost-password a, .account #edd_register_form .edd-lost-password a {
+    color: #F8B412;
+    display: inline-block;
+    font-size: 15px; }
 
 .shopping h4.widget-title {
   font-weight: 900; }
@@ -1581,39 +1119,6 @@ textarea {
     font-size: 12px; }
   .page-404 .btn-main, .page-404 input[type="submit"], .page-404 .btn-main-sm, .page-404 .btn-live-preview, .page-404 .subscription-form input[type=submit], .subscription-form .page-404 input[type=submit], .page-404 .post-comments .comment-form input[type="submit"], .post-comments .comment-form .page-404 input[type="submit"], .page-404 .edd-submit.button.blue {
     margin-top: 40px; }
-
-.coming-soon {
-  color: #fff;
-  padding: 150px 0; }
-  .coming-soon .block h1 {
-    font-size: 25px;
-    line-height: 40px; }
-  .coming-soon .block p {
-    color: #fff;
-    margin-top: 20px; }
-  .coming-soon .block .count-down ul li {
-    display: inline-block;
-    font-size: 90px;
-    line-height: 60px;
-    text-align: center;
-    position: relative;
-    font-weight: bold;
-    width: 25%; }
-    .coming-soon .block .count-down ul li:before {
-      content: ":";
-      font-size: 20pt;
-      opacity: 0.7;
-      position: absolute;
-      right: 0px;
-      top: 0px; }
-    .coming-soon .block .count-down ul li:last-child:before {
-      content: ''; }
-  .coming-soon .block .count-down div:after {
-    content: " " attr(data-interval-text);
-    font-size: 20px;
-    font-weight: normal;
-    text-transform: capitalize;
-    display: block; }
 
 .edd-submit.button.blue {
   border-color: transparent; }

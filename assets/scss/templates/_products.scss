@@ -51,11 +51,21 @@
 		.price {
 			display: inline-block;
 			color: $primary-color;
+            i {
+              margin-right:3px;
+
+            }
 		}
 		.author {
-			color:#444;
+			color:#666;
 			display: inline-block;
 			float: right;
+            font-size:12px;
+            text-transform: capitalize;
+            i {
+              margin-right:3px;
+              color:$primary-color;
+            }
 		}
 	}
 	.product-buttons {

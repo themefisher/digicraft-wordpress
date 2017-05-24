@@ -89,8 +89,8 @@ class Widget_EDD_Products extends Widget_Base {
                 </div>
                 <div class="content">
                     <div class="product-meta">
-                        <span class="price"> <i class="tf-pricetags"></i> </span>
-                        <a class="author" href=""><i class="tf-profile-male"></i><?php the_author();  ?></a>
+                        <span class="price"> <i class="tf-pricetags"></i><?php echo do_shortcode('[edd_price]');  ?> </span>
+                        <div class="author" ><i class="tf-profile-male"></i><?php the_author();  ?></div>
                     </div>
                     <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
                     <p><?php $content = get_the_content(); echo mb_strimwidth($content, 0, 150, '...');  ?></p>
