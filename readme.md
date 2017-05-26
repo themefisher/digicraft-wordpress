@@ -1,4 +1,6 @@
 # [Digi Craft]() EDD Marketplace WordPress theme
+
+[![Join the chat at https://gitter.im/DigiCraft-WP/Lobby](https://badges.gitter.im/DigiCraft-WP/Lobby.svg)](https://gitter.im/DigiCraft-WP/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A theme to empower your marketplace powered by [WordPress](http://wordpress.org/) and [Easy Digital Downloads](easydigitaldownloads.com) .
 
 ## Table of contents
