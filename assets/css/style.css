@@ -568,6 +568,17 @@ textarea {
 .single-product-page .product-description {
   padding-top: 30px;
   background: #f9f9f9; }
+.single-product-page .product-comments .post-comments {
+  margin-top: 0;
+  padding: 50px 0; }
+
+.related-product .sub-title {
+  font-size: 22px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px; }
 
 .widget {
   margin-bottom: 30px;

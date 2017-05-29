@@ -11,9 +11,9 @@
         <div class="row">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 post">
+					<div class="col-md-8 col-md-offset-2 post">
                         <div class="post-thumb">
-	                        <?php echo  the_post_thumbnail( array(500, 300) );  ?>
+	                        <?php echo  the_post_thumbnail();  ?>
                         </div>
                         <h2 class="post-title"><?php echo single_post_title(); ?></h2>
 						<div class="entry-meta post-meta">
