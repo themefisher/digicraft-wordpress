@@ -8,28 +8,49 @@ get_header(); ?>
     <?php endwhile;  ?>
 <?php endif;  ?>
 
+<?php
+//function cat_drop_down(){
+//	$categories_array = array();
+//	$args = array(
+//		'type'                     => 'post',
+//		'child_of'                 => 0,
+//		'parent'                   => '',
+//		'orderby'                  => 'name',
+//		'order'                    => 'ASC',
+//		'hide_empty'               => false,
+//		'hierarchical'             => 1,
+//		'exclude'                  => '',
+//		'include'                  => '',
+//		'number'                   => '',
+//		'taxonomy'                 => 'category',
+//		'pad_counts'               => false
+//	);
+//
+//	$categories = get_categories($args);
+//	$i =0;
+//	foreach( $categories as $category ){
+//		$categories_array[$i]['id'] = $category->term_id;
+//		$categories_array[$i]['name'] = $category->name;
+//		$i++;
+//	}
+//	return $categories_array;
+//}
+//
+//$cats = cat_drop_down();
+//
+//
+//echo '<select data-setting="tab_title">';
+//foreach($cats as $cat)
+//{
+//	echo "<option value='".$cat['id']."'>".$cat['name']."</option>";
+//}
+//echo '</select>';
+//
+//?>
 
-<!---->
-<!--<section class="hero-area bg-1 background">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-6">-->
-<!--                <img class="img-responsive" src="--><?php //echo cs_get_option('slider_img');  ?><!--" alt="">-->
-<!---->
-<!--            </div>-->
-<!---->
-<!---->
-<!--            <div class="col-md-6">-->
-<!--                <div class="block">-->
-<!---->
-<!--                    <h1>--><?php //echo cs_get_option( 'slider_heading' );  ?><!--</h1>-->
-<!--                    <p>--><?php //echo cs_get_option( 'slider_description' );  ?><!--</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!---->
+
+
+
 <!--<section class="featured-items section">-->
 <!--    <div class="container">-->
 <!--        <div class="row">-->

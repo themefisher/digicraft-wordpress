@@ -27,33 +27,6 @@ $options[]   = array(
 			'type'    => 'upload',
 			'title'   => 'Site Logo',
 		),
-		array(
-			'id'    => 'site_color',
-			'type'  => 'color_picker',
-			'title' => 'Website Default Color',
-			'default' => '#feb52b',
-		),
-
-		array(
-			'id'        => 'title_typography',
-			'type'      => 'typography',
-			'title'     => 'Title Font',
-			'default'   => array(
-				'family'  => 'Open Sans',
-				'variant' => '800',
-				'font'    => 'google', // this is helper for output
-			),
-		),
-		array(
-			'id'        => 'body_typography',
-			'type'      => 'typography',
-			'title'     => 'Body Font',
-			'default'   => array(
-				'family'  => 'Open Sans',
-				'variant' => '800',
-				'font'    => 'google', // this is helper for output
-			),
-		),
 	)
 );
 

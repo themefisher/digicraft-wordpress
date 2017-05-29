@@ -179,15 +179,21 @@ function tf_swift_register_required_plugins() {
 			'required'  => true,
 		),
 		array(
-			'name'      => 'MailChimp for WordPress',
-			'slug'      => 'mailchimp-for-wp',
-			'required'  => true,
-		),
-		array(
 			'name'      => 'Elementor Page Builder',
 			'slug'      => 'elementor',
 			'required'  => true,
 		),
+        array(
+            'name'      => 'Contact Form',
+            'slug'      => 'contact-form-7',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'DW Question Answer',
+            'slug'      => 'dw-question-answer',
+            'required'  => false,
+        ),
+
 	);
 
 	$config = array(
