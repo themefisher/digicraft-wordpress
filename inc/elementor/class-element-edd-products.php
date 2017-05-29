@@ -83,7 +83,7 @@ class Widget_EDD_Products extends Widget_Base {
         <div class="col-md-4">
             <div class="product-item">
                 <div class="product-thumb">
-                    <a href="">
+                    <a href="<?php the_permalink();  ?>">
 					    <?php the_post_thumbnail();  ?>
                     </a>
                 </div>

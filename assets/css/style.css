@@ -565,6 +565,10 @@ textarea {
 .single-product-page .product-page-header h2 {
   font-size: 25px;
   font-weight: 400; }
+.single-product-page .product-img {
+  margin-bottom: 20px; }
+  .single-product-page .product-img img {
+    width: 100%; }
 .single-product-page .product-description {
   padding-top: 30px;
   background: #f9f9f9; }

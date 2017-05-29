@@ -34,10 +34,10 @@ get_header();
 				<div class="col-md-8">
 					<div class="product-details">
 					<div class="product-img">
-
+						<?php the_post_thumbnail(); ?>
                     </div>
                     <div class="product-description-content" >
-	                    <?php the_content(); ?>
+                    	<?php the_content(); ?>
                     </div>
                 </div>
 	 		</div>
