@@ -14,3 +14,21 @@
 	font-weight: 400;
 	color: $success;
 }
+.edd-table  {
+	thead th {
+		background-color: #dedede;
+		padding:10px 0 10px 5px;
+	}
+	td {
+		padding:10px;
+		strong {
+			color:#444;
+		}
+	}
+	tbody {
+		padding:10px;
+	}
+	.edd_download_file {
+
+	}
+}

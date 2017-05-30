@@ -978,6 +978,16 @@ textarea {
   font-weight: 400;
   color: #1bbb1b; }
 
+.edd-table thead th {
+  background-color: #dedede;
+  padding: 10px 0 10px 5px; }
+.edd-table td {
+  padding: 10px; }
+  .edd-table td strong {
+    color: #444; }
+.edd-table tbody {
+  padding: 10px; }
+
 /*=================================================================
   Footer section
 ==================================================================*/
