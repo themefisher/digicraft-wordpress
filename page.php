@@ -15,21 +15,22 @@
 get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
+	<section class="default-page">
+		<div class="global-title page-title">
+			<h1><?php echo the_title(); ?></h1>
+		</div>
+	</section>
 	<section class="page-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<main id="main" class="site-main" role="main">
-						<div class="global-title">
-							<h1><?php echo the_title(); ?></h1>
-						</div>
-						<?php echo the_content(); ?>
-					</main><!-- #main -->
+					<?php the_content(); ?>
 				</div>
 			</div>
 		</div>
 	</section>
+
 <?php endwhile; // End of the loop. ?>
 
 
-<?php get_footer(); ?>
+<?php get_footer();
