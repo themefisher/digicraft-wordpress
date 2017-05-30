@@ -14,18 +14,14 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="download-category-title">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<?php
-								the_archive_title( '<h1 class="page-title">', '</h1>' );
-								the_archive_description( '<div class="taxonomy-description">', '</div>' );
-							?>
-						</div>
-					</div>
+				<div class="page-title global-page">
+					<?php
+						the_archive_title( '<h1>', '</h1>' );
+						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					?>
 				</div>
 			</header><!-- .page-header -->
-			<section class="section">
+			<section class="page-wrapper">
 				<div class="container">
 					<div class="row">
 						<?php while ( have_posts() ) : the_post();?>
