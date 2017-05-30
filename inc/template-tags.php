@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package furioustheme
+ * @package digicraft
  */
 
-if ( ! function_exists( 'furioustheme_posted_on' ) ) :
+if ( ! function_exists( 'digicraft_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function furioustheme_posted_on() {
+function digicraft_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -25,7 +25,7 @@ function furioustheme_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'furioustheme' ),
+		esc_html_x( 'Posted on %s', 'post date', 'digicraft' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -35,36 +35,36 @@ function furioustheme_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'furioustheme_entry_footer' ) ) :
+if ( ! function_exists( 'digicraft_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function furioustheme_entry_footer() {
+function digicraft_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'furioustheme' ) );
-		if ( $categories_list && furioustheme_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'furioustheme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		$categories_list = get_the_category_list( esc_html__( ', ', 'digicraft' ) );
+		if ( $categories_list && digicraft_categorized_blog() ) {
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'digicraft' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'furioustheme' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'digicraft' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'furioustheme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'digicraft' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'furioustheme' ), esc_html__( '1 Comment', 'furioustheme' ), esc_html__( '% Comments', 'furioustheme' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'digicraft' ), esc_html__( '1 Comment', 'digicraft' ), esc_html__( '% Comments', 'digicraft' ) );
 		echo '</span>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'furioustheme' ),
+			esc_html__( 'Edit %s', 'digicraft' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
@@ -78,8 +78,8 @@ endif;
  *
  * @return bool
  */
-function furioustheme_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'furioustheme_categories' ) ) ) {
+function digicraft_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'digicraft_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -91,27 +91,27 @@ function furioustheme_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'furioustheme_categories', $all_the_cool_cats );
+		set_transient( 'digicraft_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so furioustheme_categorized_blog should return true.
+		// This blog has more than 1 category so digicraft_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so furioustheme_categorized_blog should return false.
+		// This blog has only 1 category so digicraft_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in furioustheme_categorized_blog.
+ * Flush out the transients used in digicraft_categorized_blog.
  */
-function furioustheme_category_transient_flusher() {
+function digicraft_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'furioustheme_categories' );
+	delete_transient( 'digicraft_categories' );
 }
-add_action( 'edit_category', 'furioustheme_category_transient_flusher' );
-add_action( 'save_post',     'furioustheme_category_transient_flusher' );
+add_action( 'edit_category', 'digicraft_category_transient_flusher' );
+add_action( 'save_post',     'digicraft_category_transient_flusher' );

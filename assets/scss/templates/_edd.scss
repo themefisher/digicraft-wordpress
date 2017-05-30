@@ -1,4 +1,16 @@
 .edd-submit.button.blue {
   @extend .btn-main;
   border-color:transparent;
+  	&:hover {
+  		border-color:transparent!important;
+	}
+	&:focus {
+  		border-color:transparent!important;
+  		background: $primary-color;
+	}
+}
+.edd-cart-added-alert {
+	font-size: 14px;
+	font-weight: 400;
+	color: $success;
 }
