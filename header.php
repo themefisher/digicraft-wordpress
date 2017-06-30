@@ -41,7 +41,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-          <img src="<?php echo cs_get_option('site_logo')  ?>" alt="">
+          <img src="<?php echo get_theme_mod('digicraft_site_logo'); ?>" alt="">
         </a>
       </div>
   

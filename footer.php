@@ -15,13 +15,14 @@
 
 </section>
     <!--End Wrapper-->
-
-<footer id="footer" class="bg-one">
-    <div class="footer-bottom">
-        <h5>Copyright 2016. All rights reserved.</h5>
-        <h6>Design and Developed by <a href="">Themefisher</a></h6>
-    </div>
-</footer> <!-- end footer -->
+<?php if (get_theme_mod('footer_copyright_text')): ?>
+	<footer id="footer" class="bg-one">
+	    <div class="footer-bottom">
+	    	<?php echo get_theme_mod('footer_copyright_text'); ?>
+	    </div>
+	</footer> <!-- end footer -->
+	
+<?php endif ?>
 
 <?php wp_footer(); ?>
 </body>

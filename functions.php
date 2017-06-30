@@ -147,17 +147,11 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
-//Codestar Fromwork Added
-if ( file_exists(  __DIR__ . '/inc/cs-framework/cs-framework.php' ) ) {
-	require_once  __DIR__ . '/inc/cs-framework/cs-framework.php';
-}
 
 //TMG Plugin for plugin activation
 if ( file_exists(  __DIR__ . '/inc/tmg/class-tgm-plugin-activation.php' ) ) {
 	require_once  __DIR__ . '/inc/tmg/class-tgm-plugin-activation.php';
 }
-
-
 
 if( file_exists(__DIR__ . '/inc/shortcodes.php')) {
     require_once __DIR__ . '/inc/shortcodes.php' ;

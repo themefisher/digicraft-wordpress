@@ -11,9 +11,61 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function digicraft_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+$wp_customize->remove_control("header_image");
+	$wp_customize->remove_panel("widgets");
+	$wp_customize->remove_section("colors");
+	$wp_customize->remove_section("background_image");
+	$wp_customize->remove_section("static_front_page");
+	$wp_customize->remove_section("title_tagline");
+	$wp_customize->remove_section("nav");
+
+
+
+    $wp_customize->add_section('digicraft_logo', array(
+      	'title' => __('Site Logo','digicraft'),
+      	'priority' => 10
+    ));
+ 
+	$wp_customize->add_setting('digicraft_site_logo',array(
+          'default'     => '',
+          'transport' => 'refresh', // or postMessage
+        )
+    );
+ 
+    $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'digicraft_site_logo',
+           array(
+               'label'      => __( 'Upload a logo', 'theme_name' ),
+               'section'    => 'digicraft_logo',
+               'settings'   => 'digicraft_site_logo',
+           )
+       )
+   );
+
+   
+
+	// Footer settings start
+	$wp_customize -> add_section('digicraft_footer_section', array(
+   		'title' => __('Footer Settings','digicraft'),
+   		'priority'	=> 30
+   	));
+
+   $wp_customize -> add_setting('footer_copyright_text',array(
+   		'default'	=> '',
+   		'transport' => 'refresh'
+   	));
+	$wp_customize-> add_control('footer_copyright_text_control',array(
+   		'label'	=>	'Footer Copyright Text',
+   		'type'	=>	'textarea',
+   		'settings'	=>	'footer_copyright_text',
+   		'section'	=>	'digicraft_footer_section'
+	));
+	// end footer settings
+
+
 }
 add_action( 'customize_register', 'digicraft_customize_register' );
 
