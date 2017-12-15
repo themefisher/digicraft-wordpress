@@ -13,13 +13,31 @@
 function digicraft_customize_register( $wp_customize ) {
 
 $wp_customize->remove_control("header_image");
-	$wp_customize->remove_panel("widgets");
-	$wp_customize->remove_section("colors");
-	$wp_customize->remove_section("background_image");
-	$wp_customize->remove_section("static_front_page");
-	$wp_customize->remove_section("title_tagline");
-	$wp_customize->remove_section("nav");
+$wp_customize->remove_section("colors");
+$wp_customize->remove_section("background_image");
+$wp_customize->remove_section("static_front_page");
+$wp_customize->remove_section("title_tagline");
+$wp_customize->remove_section("nav");
 
+
+ $wp_customize->add_section('digicraft_color_scheme', array(
+        'title' => __('Site Color Scheme','digicraft'),
+        'priority' => 6,
+    ));
+ 
+  $wp_customize->add_setting('digicraft_color_scheme_settings',array(
+          'default'     => '#fff',
+          'transport' => 'refresh', // or postMessage
+        )
+    );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+    'label'      => __( 'Site Color Scheme', 'digicraft' ),
+    'section'    => 'digicraft_color_scheme',
+    'settings'   => 'digicraft_color_scheme_settings',
+    )
+  )
+);
+ 
 
 
     $wp_customize->add_section('digicraft_logo', array(

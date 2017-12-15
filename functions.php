@@ -40,6 +40,17 @@ function digicraft_setup() {
      */
     add_theme_support( 'post-thumbnails' );
 
+    if ( function_exists('register_sidebar') )
+      register_sidebar(array(
+        'name' => 'Name of Widgetized Area',
+        'before_widget' => '<div class = "footer-widget col-md-3">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="footer-widget-title">',
+        'after_title' => '</h4>',
+      )
+    );
+
+
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus( array(
         'primary' => esc_html__( 'Primary', 'digicraft' ),
@@ -217,3 +228,34 @@ function tf_swift_register_required_plugins() {
 
 
 
+// Customizer Color Settings
+// $primary_color = get_theme_mod('angel_color_scheme_settings');
+
+function angle_customizer_css()
+{
+  ?>
+    <style type="text/css">
+      
+.btn-main, input[type="submit"], .btn-main-sm, .btn-live-preview, .post-comments .comment-form input[type="submit"], .edd-submit.button.blue , .page-title   {
+  background: <?php echo get_theme_mod('digicraft_color_scheme_settings');  ?>
+}
+
+
+.footerInfo , .main-menu .sub-menu , .navbar-default .navbar-toggle , .woocommerce .woocommerce-MyAccount-navigation li.is-active a , .mc4wp-form-fields input[type="submit"] , .woocommerce .form-row input[type='submit'] , .blogSidebar .widget .widget-title , .product .woocommerce-tabs .tabs li.active a , .navbar-default .navbar-toggle:hover , .woocommerce .woocommerce-MyAccount-navigation li.is-active a:hover , .main-slider , .woocommerce-tabs .tabs li.active a{
+  border-color: <?php echo get_theme_mod('digicraft_color_scheme_settings');  ?>
+}
+
+
+.product-item .product-meta .price ,.product-item .product-meta .author i , .post .post-meta ul li a:hover{ 
+  color: <?php echo get_theme_mod('digicraft_color_scheme_settings');   ?>;
+}
+
+/*hover color*/
+.top-footer li a:hover {
+    color: <?php echo get_theme_mod('digicraft_color_scheme_settings');  ?>;
+}
+
+  </style>
+  <?php
+}
+add_action( 'wp_head', 'angle_customizer_css');

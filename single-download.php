@@ -42,19 +42,18 @@ get_header();
                 </div>
 	 		</div>
 
-	 			
-
-					<!-- Single Product Page Sidebar -->
-				<div class="col-md-4">
-					<div class="product-sidebar" >
-						<div class="price-widget widget" >
-							<div class="product-price text-center">
-								<?php echo do_shortcode('[edd_price]')?>
-                                <div class="buy-button">
-								    <?php echo edd_get_purchase_link(get_the_ID()); ?>
-                                </div>
-							</div>
-                        </div>
+				<!-- Single Product Page Sidebar -->
+			<div class="col-md-4">
+				<div class="product-sidebar" >
+					<div class="price-widget widget" >
+						<div class="product-price text-center">
+							<?php echo do_shortcode('[edd_price]')?>
+                            <div class="buy-button">
+							    <?php echo edd_get_purchase_link(get_the_ID()); ?>
+                            </div>
+						</div>
+                    </div>
+                    <?php if (get_the_terms(get_the_ID(), 'download_category')): ?>
                         <div class="product-category-widget widget-category widget">
                             <h4 class="widget-title"> Product Category</h4>
                             <ul>
@@ -67,10 +66,11 @@ get_header();
                                                 <?php echo $bb->name; ?>
                                             </a>
                                         </li>
-		                            <?php endforeach;
-	                            endif; ?>
+		                            <?php endforeach; endif; ?>
                             </ul>
                         </div>
+                    <?php endif; ?>
+                    <?php if (get_the_terms(get_the_ID(), 'download_tag')): ?>
                         <div class="product-tag-widget widget-tag widget">
                             <h4 class="widget-title"> Product Tags</h4>
                             <ul>
@@ -86,7 +86,8 @@ get_header();
                                 <?php endforeach; endif; ?>
                             </ul>
                         </div>
-					</div>
+                        <?php endif ?>
+                    </div>
 				</div>
             </div>
 		</div>
@@ -94,6 +95,7 @@ get_header();
 
 	<section class="product-comments bg-gray">
 		<?php
+
 			// If comments are open or we have at least one comment, load up the comment template
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
@@ -159,6 +161,8 @@ get_header();
 
 
 <?php endwhile; // end of the loop. ?>
+
+
 
 
 <?php get_footer(); ?>

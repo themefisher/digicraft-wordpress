@@ -1,26 +1,29 @@
-var gulp = require('gulp'),
-	sass=require('gulp-ruby-sass'),
-	uglify = require('gulp-uglify'),
-	sourcemaps = require('gulp-sourcemaps');
-;
+'use strict';
+var gulp         = require('gulp');
+var sass         = require('gulp-sass');
+var uglify       = require('gulp-uglify');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
 
 
-gulp.task('styles', function() {
-	return sass('scss/style.scss')
-  	.on('error',console.error.bind(console))
-  	.pipe(gulp.dest('css'));
 
+// minify sass
+gulp.task('sass', function () {
+  return gulp.src('scss/**/*.scss')
+  	.pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./css'));
 });
 
-// SASS Watch
-gulp.task('watch',function(){
-	gulp.watch('scss/**/*.scss',['styles']);
-	gulp.src('scss/**/*.scss')
-    
-});
+//Watch file
+gulp.task('watch', function(){
+    gulp.watch('scss/**/*.scss',['sass']);
+})
 
-
-
-
-gulp.task('default',['styles']);
-
+// Default task
+gulp.task('default', ['sass','watch']);

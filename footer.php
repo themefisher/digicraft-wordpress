@@ -14,9 +14,27 @@
 
 
 </section>
+
+
+<footer class="footer top-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Name of Widgetized Area") ) : ?>
+                <?php endif;?>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
     <!--End Wrapper-->
 <?php if (get_theme_mod('footer_copyright_text')): ?>
-	<footer id="footer" class="bg-one">
+	<footer class="footer-bottom">
 	    <div class="footer-bottom">
 	    	<?php echo get_theme_mod('footer_copyright_text'); ?>
 	    </div>
