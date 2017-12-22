@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package themefisher
+ * @package digicraft
  */
 
 ?>
@@ -16,7 +16,7 @@
 </section>
 
 
-<footer class="footer top-footer">
+<!-- <footer class="footer top-footer">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -29,14 +29,14 @@
 </footer>
 
 
-
+ -->
 
 
     <!--End Wrapper-->
 <?php if (get_theme_mod('footer_copyright_text')): ?>
 	<footer class="footer-bottom">
 	    <div class="footer-bottom">
-	    	<?php echo get_theme_mod('footer_copyright_text'); ?>
+	    	<p><?php echo get_theme_mod('footer_copyright_text'); ?></p>
 	    </div>
 	</footer> <!-- end footer -->
 	

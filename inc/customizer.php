@@ -56,7 +56,7 @@ $wp_customize->remove_section("nav");
            $wp_customize,
            'digicraft_site_logo',
            array(
-               'label'      => __( 'Upload a logo', 'theme_name' ),
+               'label'      => __( 'Upload a logo', 'digicraft' ),
                'section'    => 'digicraft_logo',
                'settings'   => 'digicraft_site_logo',
            )

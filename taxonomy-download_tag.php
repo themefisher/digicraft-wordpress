@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package themefisher
+ * @package digicraft
  */
 
 get_header(); ?>

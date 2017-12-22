@@ -1025,7 +1025,7 @@ textarea {
 .top-footer {
   background-color: #24222b;
   padding: 100px 0 80px; }
-  .top-footer h3 {
+  .top-footer .footer-widget-title {
     font-size: 14px;
     line-height: 1.5;
     color: #fff;

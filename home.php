@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * @package themefisher
+ * @package digicraft
  */
 
 get_header(); 

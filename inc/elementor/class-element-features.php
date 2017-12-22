@@ -6,7 +6,7 @@ use elementor\Controls_Manager;
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 /**
- * Eventas Testimonial Carousel
+ * Digicraft Testimonial Carousel
  *
  * DigiCraft widget for Testimonial Carousel.
  *

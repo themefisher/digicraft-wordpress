@@ -15,7 +15,7 @@ get_header(); ?>
 				<div class="block">
 					<h1>404</h1>
 					<p>The page you are looking for was moved, removed, renamed or <br />might never existed.</p>
-					<a href="<?php bloginfo( 'url' );?>" class="btn btn-main">Go Home</a>
+					<a href="<?php echo esc_url( home_url() );?>" class="btn btn-main">Go Home</a>
 				</div>
 				
 			</div>

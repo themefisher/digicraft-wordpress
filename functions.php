@@ -40,16 +40,6 @@ function digicraft_setup() {
      */
     add_theme_support( 'post-thumbnails' );
 
-    if ( function_exists('register_sidebar') )
-      register_sidebar(array(
-        'name' => 'Name of Widgetized Area',
-        'before_widget' => '<div class = "footer-widget col-md-3">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4 class="footer-widget-title">',
-        'after_title' => '</h4>',
-      )
-    );
-
 
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus( array(
@@ -231,7 +221,7 @@ function tf_swift_register_required_plugins() {
 // Customizer Color Settings
 // $primary_color = get_theme_mod('angel_color_scheme_settings');
 
-function angle_customizer_css()
+function digicraft_customizer_css()
 {
   ?>
     <style type="text/css">
@@ -258,4 +248,4 @@ function angle_customizer_css()
   </style>
   <?php
 }
-add_action( 'wp_head', 'angle_customizer_css');
+add_action( 'wp_head', 'digicraft_customizer_css');

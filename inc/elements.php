@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * @since 1.0.0
  */
-class Eventas_Elements {
+class Digicraft_Elements {
 
 
 	public function __construct() {
@@ -57,4 +57,4 @@ class Eventas_Elements {
 	}
 }
 
-new Eventas_Elements();
+new Digicraft_Elements();

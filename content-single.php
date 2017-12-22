@@ -1,6 +1,6 @@
 <?php
 /**
- * @package themefisher
+ * @package digicraft
  */
 ?>
 
