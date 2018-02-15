@@ -89,22 +89,32 @@ class Widget_EDD_Products extends Widget_Base {
                 </div>
                 <div class="content">
                     <div class="product-meta">
-                        <span class="price"> <i class="tf-pricetags"></i><?php echo do_shortcode('[edd_price]');  ?> </span>
-                        <div class="author" ><i class="tf-profile-male"></i><?php the_author();  ?></div>
+                        <span class="price">
+                            <i class="tf-pricetags"></i>
+                            <?php echo do_shortcode('[edd_price]');  ?>
+                        </span>
+                        <div class="author" >
+                            <i class="tf-profile-male"></i>
+                            <?php the_author();  ?>
+                        </div>
                     </div>
-                    <h4><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h4>
-                    <p><?php $content = get_the_content(); echo mb_strimwidth($content, 0, 150, '...');  ?></p>
+                    <h4>
+                        <a href="<?php the_permalink();  ?>"><?php the_title();  ?></a>
+                    </h4>
+                    <p>
+                        <?php $content = get_the_content(); echo mb_strimwidth($content, 0, 150, '...');  ?>
+                    </p>
                     <div class="product-buttons">
                         <a href="<?php the_permalink();  ?>" class="btn btn-main-sm">Details</a>
                     </div>
                 </div>
             </div>
+        </<div>
+            
         </div>
 	    <?php endwhile;  endif ;
 	    wp_reset_postdata();
-	    ?>
-        </div>
-        <?php
+	    ?> <?php
 
     }
 
